@@ -16,8 +16,12 @@ Weather app made with Bootstrap 4, Sass and Javascript.
 
 ## Technologies
 
-- Tech
-- [name](https://google.com)
+- HTML
+- CSS
+- Sass
+- Bootstrap 4
+- Javascript
+- Gulp
 
 ## Setup
 
