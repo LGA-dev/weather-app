@@ -1,2 +1,45 @@
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+html, body {
+  // margin: 0;
+  // padding: 0;
+  // min-height: 100vh; /* use min-height 100 vh instead of height to allow extended height with large content */
+  // overflow: auto;
+}
+
+.container {
+  // border: 1px solid black;
+  height: 100vh;
+}
+
+.user-location {
+  background-color: rgba(255, 0, 0, 0.5);
+  // min-height: 10vh;
+  height: 15vh;
+}
+
+.current-temp {
+  background-color: rgba(0, 0, 255, 0.5);
+  // min-height: 30vh;
+  height: 30vh;
+}
+
+.current-stats {
+  background-color: rgba(0, 255, 0, 0.5);
+  // min-height: 30vh;
+  height: 27.5vh;
+}
+
+.weather-forecast {
+  background-color: rgba(255, 255, 0, 0.5);
+  // min-height: 30vh;
+  // min-height: auto;
+  // flex: 1;
+  height: 27.5vh;
+}
+
+.col-3, .col-4,.col-6,.col-12 {
+  // border: 1px solid black;
+  // margin: 1rem;
+}

@@ -1,13 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gulp</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
+
+  <main class="container d-flex flex-column">
+    <!-- Location and date -->
+    <div class="user-location row d-flex flex-column">
+      <div class="user-location__content-container col-12">
+        <!-- Location name -->
+        <h2 class="user-location__name">City, Country</h2>
+        <!-- Location date -->
+        <h5 class="user-location__date">Date</h5>
+      </div>
+    </div>
+    <!-- Current temperature -->
+    <div class="current-temp row">
+      <!-- Temperature icon -->
+      <div class="current-temp__icon-container col-6 d-flex flex-column justify-content-center align-items-center">
+        <img class="current-temp__icon" src="https://via.placeholder.com/150" alt="" srcset="">
+      </div>
+      <!-- Temperature dgree and description -->
+      <div class="current-temp__content-container col-6 d-flex flex-column justify-content-center align-items-center">
+        <!-- Current temperature value -->
+        <div class="current-temp__value">
+          20&deg;
+        </div>
+        <!-- Current temperature description -->
+        <div class="current-temp__description">
+          <!-- Change name??? (current-weather) -->
+          Mostly sunny
+        </div>
+      </div>
+    </div>
+    <!-- Current stats -->
+    <div class="current-stats row text-center">
+      <!-- Current max temp -->
+      <div class="current-stats__max-temp col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__max-temp--value">
+          23&deg;
+        </div>
+        <div class="current-stats__section-title">
+          Max
+        </div>
+      </div>
+      <!-- Current wind speed -->
+      <div class="current-stats__wind-speed col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__wind-speed--value">
+          10 kmph
+        </div>
+        <div class="current-stats__section-title">
+          Wind
+        </div>
+      </div>
+      <!-- Current sunrise time -->
+      <div class="current-stats__todays-sunrise col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__todays-sunrise--value">
+          05:25
+        </div>
+        <div class="current-stats__section-title">
+          Sunruse
+        </div>
+      </div>
+      <!-- Current min temp -->
+      <div class="current-stats__min-temp col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__min-temp--value">
+          10&deg;
+        </div>
+        <div class="current-stats__section-title">
+          Min
+        </div>
+      </div>
+      <!-- Current rain chance -->
+      <div class="current-stats__rain-chance col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__rain-chance--value">
+          0%
+        </div>
+        <div class="current-stats__section-title">
+          Rain
+        </div>
+      </div>
+      <!-- Current sunset time -->
+      <div class="current-stats__todays-sunset col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="current-stats__todays-sunset--value">
+          19:25
+        </div>
+        <div class="current-stats__section-title">
+          Sunset
+        </div>
+      </div>
+    </div>
+    <!-- Next three days forecast -->
+    <div class="weather-forecast row d-flex justify-content-around">
+      <!-- Section title -->
+      <div class="weather-forecast__title col-12 d-flex justify-content-left align-items-center">
+        <h5 class="m-0 p-0">Next three days</h5>
+      </div>
+      <!-- Weather forecast card -->
+      <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
+        <p class="m-0">Mon</p>
+        <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+        <p class="m-0">8&deg; - 19&deg;</p>
+      </div>
+      <!-- Weather forecast card -->
+      <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
+        <p class="m-0">Tue</p>
+        <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+        <p class="m-0">5&deg; - 16&deg;</p>
+      </div>
+      <!-- Weather forecast card -->
+      <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
+        <p class="m-0">Wed</p>
+        <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+        <p class="m-0">2&deg; - 44&deg;</p>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
