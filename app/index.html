@@ -11,22 +11,24 @@
 <body>
 
   <main class="container d-flex flex-column">
+    
     <!-- Location and date -->
-    <div class="user-location row d-flex flex-column">
-      <div class="user-location__content-container col-12">
+    <div class="current-location row d-flex flex-column">
+      <div class="current-location__content-container col-12">
         <!-- Location name -->
-        <h2 class="user-location__name">City, Country</h2>
+        <h5 class="current-location__name">City</h5>
         <!-- Location date -->
-        <h5 class="user-location__date">Date</h5>
+        <h5 class="current-location__date">Date</h5>
       </div>
     </div>
+
     <!-- Current temperature -->
     <div class="current-temp row">
       <!-- Temperature icon -->
       <div class="current-temp__icon-container col-6 d-flex flex-column justify-content-center align-items-center">
         <img class="current-temp__icon" src="https://via.placeholder.com/150" alt="" srcset="">
       </div>
-      <!-- Temperature dgree and description -->
+      <!-- Temperature degree and description -->
       <div class="current-temp__content-container col-6 d-flex flex-column justify-content-center align-items-center">
         <!-- Current temperature value -->
         <div class="current-temp__value">
@@ -39,14 +41,15 @@
         </div>
       </div>
     </div>
+
     <!-- Current stats -->
     <div class="current-stats row text-center">
-      <!-- Current max temp -->
-      <div class="current-stats__max-temp col-4 d-flex flex-column justify-content-center align-items-center">
-        <div class="current-stats__max-temp--value">
+      <!-- Daily max temp -->
+      <div class="daily-stats__max-temp col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="daily-stats__max-temp--value">
           23&deg;
         </div>
-        <div class="current-stats__section-title">
+        <div class="daily-stats__section-title">
           Max
         </div>
       </div>
@@ -59,43 +62,44 @@
           Wind
         </div>
       </div>
-      <!-- Current sunrise time -->
-      <div class="current-stats__todays-sunrise col-4 d-flex flex-column justify-content-center align-items-center">
-        <div class="current-stats__todays-sunrise--value">
+      <!-- Daily sunrise time -->
+      <div class="daily-stats__sunrise col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="daily-stats__sunrise--value">
           05:25
         </div>
-        <div class="current-stats__section-title">
-          Sunruse
+        <div class="daily-stats__section-title">
+          Sunrise
         </div>
       </div>
-      <!-- Current min temp -->
-      <div class="current-stats__min-temp col-4 d-flex flex-column justify-content-center align-items-center">
-        <div class="current-stats__min-temp--value">
+      <!-- Daily min temp -->
+      <div class="daily-stats__min-temp col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="daily-stats__min-temp--value">
           10&deg;
         </div>
-        <div class="current-stats__section-title">
+        <div class="daily-stats__section-title">
           Min
         </div>
       </div>
-      <!-- Current rain chance -->
-      <div class="current-stats__rain-chance col-4 d-flex flex-column justify-content-center align-items-center">
-        <div class="current-stats__rain-chance--value">
+      <!-- Daily rain chance -->
+      <div class="daily-stats__rain-chance col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="daily-stats__rain-chance--value">
           0%
         </div>
-        <div class="current-stats__section-title">
+        <div class="daily-stats__section-title">
           Rain
         </div>
       </div>
-      <!-- Current sunset time -->
-      <div class="current-stats__todays-sunset col-4 d-flex flex-column justify-content-center align-items-center">
-        <div class="current-stats__todays-sunset--value">
+      <!-- Daily sunset time -->
+      <div class="daily-stats__sunset col-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="daily-stats__sunset--value">
           19:25
         </div>
-        <div class="current-stats__section-title">
+        <div class="daily-stats__section-title">
           Sunset
         </div>
       </div>
     </div>
+
     <!-- Next three days forecast -->
     <div class="weather-forecast row d-flex justify-content-around">
       <!-- Section title -->
@@ -104,24 +108,25 @@
       </div>
       <!-- Weather forecast card -->
       <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-        <p class="m-0">Mon</p>
+        <p class="weather-forecast__card--day-1--name m-0">Mon</p>
         <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-        <p class="m-0">8&deg; - 19&deg;</p>
+        <p class="weather-forecast__card--day-1--temps m-0">X</p>
       </div>
       <!-- Weather forecast card -->
       <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-        <p class="m-0">Tue</p>
+        <p class="weather-forecast__card--day-2--name m-0">Tue</p>
         <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-        <p class="m-0">5&deg; - 16&deg;</p>
+        <p class="weather-forecast__card--day-2--temps m-0">X</p>
       </div>
       <!-- Weather forecast card -->
       <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-        <p class="m-0">Wed</p>
+        <p class="weather-forecast__card--day-3--name m-0">Wed</p>
         <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-        <p class="m-0">2&deg; - 44&deg;</p>
+        <p class="weather-forecast__card--day-3--temps m-0">X</p>
       </div>
     </div>
   </main>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
