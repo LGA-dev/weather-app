@@ -1,0 +1,41 @@
+@include media-breakpoint-up(xs) {
+  body {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  body {
+    background-color: rgba(81, 255, 0, 0.5);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    background-color: rgba(0, 255, 213, 0.5);
+  }
+  // Display section D (md,lg,xl)
+  div.col-12:nth-child(4) {
+    display: block;
+  }
+  // Hide section E (md,lg,xl)
+  div.col-12:nth-child(5) {
+    display: none;
+  }
+  // Display section F (md,lg,xl)
+  div.col-12:nth-child(6) {
+    display: block;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    background-color: rgba(0, 17, 255, 0.5);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body {
+    background-color: rgba(255, 0, 119, 0.5);
+  }
+}
