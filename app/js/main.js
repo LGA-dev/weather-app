@@ -19,6 +19,27 @@ window.addEventListener('load', ()=> {
   let weatherForecastDay3Name = document.querySelector(".weather-forecast__card--day-3--name");
   let weatherForecastDay3Temperatures = document.querySelector(".weather-forecast__card--day-3--temps");
 
+  let weatherForecastHourly1Name = document.querySelector(".weather-forecast__card--hour-1--name");
+  let weatherForecastHourly1Temperatures = document.querySelector(".weather-forecast__card--hour-1--temps");
+
+  let weatherForecastHourly4Name = document.querySelector(".weather-forecast__card--hour-4--name");
+  let weatherForecastHourly4Temperatures = document.querySelector(".weather-forecast__card--hour-4--temps");
+
+  let weatherForecastHourly7Name = document.querySelector(".weather-forecast__card--hour-7--name");
+  let weatherForecastHourly7Temperatures = document.querySelector(".weather-forecast__card--hour-7--temps");
+
+  let weatherForecastHourly10Name = document.querySelector(".weather-forecast__card--hour-10--name");
+  let weatherForecastHourly10Temperatures = document.querySelector(".weather-forecast__card--hour-10--temps");
+
+  let weatherForecastHourly13Name = document.querySelector(".weather-forecast__card--hour-13--name");
+  let weatherForecastHourly13Temperatures = document.querySelector(".weather-forecast__card--hour-13--temps");
+
+  let weatherForecastHourly16Name = document.querySelector(".weather-forecast__card--hour-16--name");
+  let weatherForecastHourly16Temperatures = document.querySelector(".weather-forecast__card--hour-16--temps");
+
+  let weatherForecastHourly19Name = document.querySelector(".weather-forecast__card--hour-19--name");
+  let weatherForecastHourly19Temperatures = document.querySelector(".weather-forecast__card--hour-19--temps");
+
 
   if(navigator.geolocation){
     // Get the current position of the device
@@ -58,6 +79,27 @@ window.addEventListener('load', ()=> {
           const weatherForecastDay3MinTemps = data.daily[3].temp.min;
           const weatherForecastDay3MaxTemps = data.daily[3].temp.max;
 
+          const weatherForecastHourly1Nm = convertUnixTimeStampToHourAndMinute(data.hourly[1].dt);
+          const weatherForecastHourly1Temps = data.hourly[1].temp;
+
+          const weatherForecastHourly4Nm = convertUnixTimeStampToHourAndMinute(data.hourly[4].dt);
+          const weatherForecastHourly4Temps = data.hourly[4].temp;
+          
+          const weatherForecastHourly7Nm = convertUnixTimeStampToHourAndMinute(data.hourly[7].dt);
+          const weatherForecastHourly7Temps = data.hourly[7].temp;
+
+          const weatherForecastHourly10Nm = convertUnixTimeStampToHourAndMinute(data.hourly[10].dt);
+          const weatherForecastHourly10Temps = data.hourly[10].temp;
+
+          const weatherForecastHourly13Nm = convertUnixTimeStampToHourAndMinute(data.hourly[13].dt);
+          const weatherForecastHourly13Temps = data.hourly[13].temp;
+
+          const weatherForecastHourly16Nm = convertUnixTimeStampToHourAndMinute(data.hourly[16].dt);
+          const weatherForecastHourly16Temps = data.hourly[16].temp;
+
+          const weatherForecastHourly19Nm = convertUnixTimeStampToHourAndMinute(data.hourly[19].dt);
+          const weatherForecastHourly19Temps = data.hourly[19].temp;
+
           // const rain = data.rain['1h'];
           // console.log(rain)
 
@@ -78,6 +120,27 @@ window.addEventListener('load', ()=> {
           weatherForecastDay2Temperatures.textContent = weatherForecastDay2MinTemps + "-" + weatherForecastDay2MaxTemps;
           weatherForecastDay3Name.textContent = weatherForecastDay3Nm;
           weatherForecastDay3Temperatures.textContent = weatherForecastDay3MinTemps + "-" + weatherForecastDay3MaxTemps;
+
+          weatherForecastHourly1Name.textContent = weatherForecastHourly1Nm;
+          weatherForecastHourly1Temperatures.textContent = weatherForecastHourly1Temps;
+
+          weatherForecastHourly4Name.textContent = weatherForecastHourly4Nm;
+          weatherForecastHourly4Temperatures.textContent = weatherForecastHourly4Temps;
+
+          weatherForecastHourly7Name.textContent = weatherForecastHourly7Nm;
+          weatherForecastHourly7Temperatures.textContent = weatherForecastHourly7Temps;
+
+          weatherForecastHourly10Name.textContent = weatherForecastHourly10Nm;
+          weatherForecastHourly10Temperatures.textContent = weatherForecastHourly10Temps;
+
+          weatherForecastHourly13Name.textContent = weatherForecastHourly13Nm;
+          weatherForecastHourly13Temperatures.textContent = weatherForecastHourly13Temps;
+
+          weatherForecastHourly16Name.textContent = weatherForecastHourly16Nm;
+          weatherForecastHourly16Temperatures.textContent = weatherForecastHourly16Temps;
+
+          weatherForecastHourly19Name.textContent = weatherForecastHourly19Nm;
+          weatherForecastHourly19Temperatures.textContent = weatherForecastHourly19Temps;
 
           // Console logs for test
           console.log(data);

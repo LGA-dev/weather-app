@@ -1,8 +1,8 @@
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins/_breakpoints";
-@import 'variables';
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "variables";
 
 
 .container {
@@ -53,6 +53,18 @@ div.col-12:nth-child(6) {
 
 .col-3, .col-4, .col-6, .col-12 {
   outline: 1px solid black;
+}
+
+// .col-12 .weather-forecast div.weather-forecast__card:nth-child(7) {
+//   background-color: red !important;
+// }
+
+// .col-12 .weather-forecast div.weather-forecast__card:nth-child(8) {
+//   background-color: red !important;
+// }
+
+div.weather-forecast__card:nth-child(7) {
+  border: 1px solid black;
 }
 
 @import 'breakpoints';
