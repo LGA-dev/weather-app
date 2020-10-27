@@ -123,7 +123,7 @@ window.addEventListener('load', ()=> {
           const dailyForecast__MaxTemp_value = data.daily[0].temp.max;
           const dailyForecast__MinTemp_value = data.daily[0].temp.min;
           const dailyForecast__RainChance_value = data.daily[0].pop;
-          const dailyForecast__WindSpeed_value = data.daily[0].wind_speed;
+          const dailyForecast__WindSpeed_value = data.current.wind_speed;
           const dailyForecast__SunriseTime_value = convertUnixTimeStampToHourAndMinute(data.current.sunrise);
           const dailyForecast__SunsetTime_value = convertUnixTimeStampToHourAndMinute(data.current.sunset);
           
@@ -207,86 +207,86 @@ window.addEventListener('load', ()=> {
           currentForecast__CurrentDate.textContent = currentForecast__CurrentDate_value;
 
           // Current forecast
-          currentForecast__CurrentTemp.textContent = currentForecast__CurrentTemp_value;
+          currentForecast__CurrentTemp.textContent = parseInt(currentForecast__CurrentTemp_value) + '°';
           currentForecast__CurrentTempDescription.textContent = currentForecast__CurrentTempDescription_value;
 
           // Daily forecast
-          dailyForecast__MaxTemp.textContent = dailyForecast__MaxTemp_value;
-          dailyForecast__MinTemp.textContent = dailyForecast__MinTemp_value;
-          dailyForecast__WindSpeed.textContent = dailyForecast__WindSpeed_value;
-          dailyForecast__RainChance.textContent = dailyForecast__RainChance_value;
+          dailyForecast__MaxTemp.textContent = parseInt(dailyForecast__MaxTemp_value) + '°';
+          dailyForecast__MinTemp.textContent = parseInt(dailyForecast__MinTemp_value) + '°';
+          dailyForecast__WindSpeed.textContent = parseInt(dailyForecast__WindSpeed_value);
+          dailyForecast__RainChance.textContent = dailyForecast__RainChance_value + "%";
           dailyForecast__SunriseTime.textContent = dailyForecast__SunriseTime_value;
           dailyForecast__SunsetTime.textContent = dailyForecast__SunsetTime_value;
 
           // Hourly forecast
           // ** Display next (1) hour **
           hourlyForecast__Hour1_Name.textContent = hourlyForecast__Hour1_Name_value;
-          hourlyForecast__Hour1_Temperature.textContent = hourlyForecast__Hour1_Temp_value;
+          hourlyForecast__Hour1_Temperature.textContent = parseInt(hourlyForecast__Hour1_Temp_value) + '°';
           // ** Display next (4) hour **
           hourlyForecast__Hour4_Name.textContent = hourlyForecast__Hour4_Name_value;
-          hourlyForecast__Hour4_Temperature.textContent = hourlyForecast__Hour4_Temp_value;
+          hourlyForecast__Hour4_Temperature.textContent = parseInt(hourlyForecast__Hour4_Temp_value) + '°';
           // ** Display next (7) hour **
           hourlyForecast__Hour7_Name.textContent = hourlyForecast__Hour7_Name_value;
-          hourlyForecast__Hour7_Temperature.textContent = hourlyForecast__Hour7_Temp_value;
+          hourlyForecast__Hour7_Temperature.textContent = parseInt(hourlyForecast__Hour7_Temp_value) + '°';
           // ** Display next (10) hour **
           hourlyForecast__Hour10_Name.textContent = hourlyForecast__Hour10_Name_value;
-          hourlyForecast__Hour10_Temperature.textContent = hourlyForecast__Hour10_Temp_value;
+          hourlyForecast__Hour10_Temperature.textContent = parseInt(hourlyForecast__Hour10_Temp_value) + '°';
           // ** Display next (13) hour **
           hourlyForecast__Hour13_Name.textContent = hourlyForecast__Hour13_Name_value;
-          hourlyForecast__Hour13_Temperature.textContent = hourlyForecast__Hour13_Temp_value;
+          hourlyForecast__Hour13_Temperature.textContent = parseInt(hourlyForecast__Hour13_Temp_value) + '°';
           // ** Display next (16) hour **
           hourlyForecast__Hour16_Name.textContent = hourlyForecast__Hour16_Name_value;
-          hourlyForecast__Hour16_Temperature.textContent = hourlyForecast__Hour16_Temp_value;
+          hourlyForecast__Hour16_Temperature.textContent = parseInt(hourlyForecast__Hour16_Temp_value) + '°';
           // ** Display next (19) hour **
           hourlyForecast__Hour19_Name.textContent = hourlyForecast__Hour19_Name_value;
-          hourlyForecast__Hour19_Temperature.textContent = hourlyForecast__Hour19_Temp_value;
+          hourlyForecast__Hour19_Temperature.textContent = parseInt(hourlyForecast__Hour19_Temp_value) + '°';
 
 
           // Three days forecast
           // ** Display next (1) day **
           threeDaysForecast__FirstDay_Name.textContent = threeDaysForecast__FirstDay_Name_value;
-          threeDaysForecast__FirstDay_Temperatures.textContent = threeDaysForecast__FirstDay_MinTemp_value + "-" + threeDaysForecast__FirstDay_MaxTemp_value;
+          threeDaysForecast__FirstDay_Temperatures.textContent = parseInt(threeDaysForecast__FirstDay_MinTemp_value) + '°' + " - " + parseInt(threeDaysForecast__FirstDay_MaxTemp_value) + '°';
           // ** Display next (2) day **
           threeDaysForecast__SecondDay_Name.textContent = threeDaysForecast__SecondDay_Name_value;
-          threeDaysForecast__SecondDay_Temperatures.textContent = threeDaysForecast__SecondDay_MinTemp_value + "-" + threeDaysForecast__SecondDay_MaxTemp_value;
+          threeDaysForecast__SecondDay_Temperatures.textContent = parseInt(threeDaysForecast__SecondDay_MinTemp_value) + '°' + " - " + parseInt( threeDaysForecast__SecondDay_MaxTemp_value) + '°';
           // ** Display next (3) day **
           threeDaysForecast__ThirdDay_Name.textContent = threeDaysForecast__ThirdDay_Name_value;
-          threeDaysForecast__ThirdDay_Temperatures.textContent = threeDaysForecast__ThirdDay_MinTemp_value + "-" + threeDaysForecast__ThirdDay_MaxTemp_value;
+          threeDaysForecast__ThirdDay_Temperatures.textContent = parseInt(threeDaysForecast__ThirdDay_MinTemp_value) + '°' + " - " + parseInt(threeDaysForecast__ThirdDay_MaxTemp_value) + '°';
 
           // Five days forecast
           // ** Display next (1) day **
           fiveDaysForecast__FirstDay_Name.textContent = fiveDaysForecast__FirstDay_Name_value;
-          fiveDaysForecast__FirstDay_MaxTemperature.textContent = fiveDaysForecast__FirstDay_MaxTemp_value;
-          fiveDaysForecast__FirstDay_MinTemperature.textContent = fiveDaysForecast__FirstDay_MinTemp_value;
-          fiveDaysForecast__FirstDay_WindSpeed.textContent = fiveDaysForecast__FirstDay_WindSpeed_value;
-          fiveDaysForecast__FirstDay_RainChance.textContent = (fiveDaysForecast__FirstDay_RainChance_value*100);
+          fiveDaysForecast__FirstDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MaxTemp_value) + '°';
+          fiveDaysForecast__FirstDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MinTemp_value) + '°';
+          fiveDaysForecast__FirstDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FirstDay_WindSpeed_value);
+          fiveDaysForecast__FirstDay_RainChance.textContent = (fiveDaysForecast__FirstDay_RainChance_value*100) + '%';
           // ** Display next (2) day **
           fiveDaysForecast__SecondDay_Name.textContent = fiveDaysForecast__SecondDay_Name_value;
-          fiveDaysForecast__SecondDay_MaxTemperature.textContent = fiveDaysForecast__SecondDay_MaxTemp_value;
-          fiveDaysForecast__SecondDay_MinTemperature.textContent = fiveDaysForecast__SecondDay_MinTemp_value;
-          fiveDaysForecast__SecondDay_WindSpeed.textContent = fiveDaysForecast__SecondDay_WindSpeed_value;
-          fiveDaysForecast__SecondDay_RainChance.textContent = (fiveDaysForecast__SecondDay_RainChance_value*100);
+          fiveDaysForecast__SecondDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MaxTemp_value) + '°';
+          fiveDaysForecast__SecondDay_MinTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MinTemp_value) + '°';
+          fiveDaysForecast__SecondDay_WindSpeed.textContent = parseInt(fiveDaysForecast__SecondDay_WindSpeed_value);
+          fiveDaysForecast__SecondDay_RainChance.textContent = (fiveDaysForecast__SecondDay_RainChance_value*100) + '%';
           // ** Display next (3) day **
           fiveDaysForecast__ThirdDay_Name.textContent = fiveDaysForecast__ThirdDay_Name_value;
-          fiveDaysForecast__ThirdDay_MaxTemperature.textContent = fiveDaysForecast__ThirdDay_MaxTemp_value;
-          fiveDaysForecast__ThirdDay_MinTemperature.textContent = fiveDaysForecast__ThirdDay_MinTemp_value;
-          fiveDaysForecast__ThirdDay_WindSpeed.textContent = fiveDaysForecast__ThirdDay_WindSpeed_value;
-          fiveDaysForecast__ThirdDay_RainChance.textContent = (fiveDaysForecast__ThirdDay_RainChance_value*100);
+          fiveDaysForecast__ThirdDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MaxTemp_value) + '°';
+          fiveDaysForecast__ThirdDay_MinTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MinTemp_value) + '°';
+          fiveDaysForecast__ThirdDay_WindSpeed.textContent = parseInt(fiveDaysForecast__ThirdDay_WindSpeed_value);
+          fiveDaysForecast__ThirdDay_RainChance.textContent = (fiveDaysForecast__ThirdDay_RainChance_value*100) + '%';
           // ** Display next (4) day **
           fiveDaysForecast__FourthDay_Name.textContent = fiveDaysForecast__FourthDay_Name_value;
-          fiveDaysForecast__FourthDay_MaxTemperature.textContent = fiveDaysForecast__FourthDay_MaxTemp_value;
-          fiveDaysForecast__FourthDay_MinTemperature.textContent = fiveDaysForecast__FourthDay_MinTemp_value;
-          fiveDaysForecast__FourthDay_WindSpeed.textContent = fiveDaysForecast__FourthDay_WindSpeed_value;
-          fiveDaysForecast__FourthDay_RainChance.textContent = (fiveDaysForecast__FourthDay_RainChance_value*100);
+          fiveDaysForecast__FourthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MaxTemp_value) + '°';
+          fiveDaysForecast__FourthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MinTemp_value) + '°';
+          fiveDaysForecast__FourthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FourthDay_WindSpeed_value);
+          fiveDaysForecast__FourthDay_RainChance.textContent = (fiveDaysForecast__FourthDay_RainChance_value*100) + '%';
           // ** Display next (5) day **
           fiveDaysForecast__FifthDay_Name.textContent = fiveDaysForecast__FifthDay_Name_value;
-          fiveDaysForecast__FifthDay_MaxTemperature.textContent = fiveDaysForecast__FifthDay_MaxTemp_value;
-          fiveDaysForecast__FifthDay_MinTemperature.textContent = fiveDaysForecast__FifthDay_MinTemp_value;
-          fiveDaysForecast__FifthDay_WindSpeed.textContent = fiveDaysForecast__FifthDay_WindSpeed_value;
-          fiveDaysForecast__FifthDay_RainChance.textContent = (fiveDaysForecast__FifthDay_RainChance_value*100);
+          fiveDaysForecast__FifthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MaxTemp_value) + '°';
+          fiveDaysForecast__FifthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MinTemp_value) + '°';
+          fiveDaysForecast__FifthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FifthDay_WindSpeed_value);
+          fiveDaysForecast__FifthDay_RainChance.textContent = (fiveDaysForecast__FifthDay_RainChance_value*100) + '%';
 
           // Console logs for test
-          // console.log(data);
+          console.log(data);
         })
     })
   }
