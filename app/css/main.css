@@ -7157,12 +7157,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .container {
-  outline: 1px solid red;
-  height: 100vh; }
+  outline: 1px solid red; }
 
 html {
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1600 - 300))) !important;
-  height: 100%; }
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1600 - 300))) !important; }
 
 div.col-12:nth-child(4) {
   display: none; }
@@ -7175,41 +7173,33 @@ div.col-12:nth-child(6) {
   min-height: 10vh; }
 
 .current-temp {
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(238, 255, 0, 0.5);
   min-height: 30vh; }
 
-.current-stats {
+.daily-stats {
   background-color: rgba(0, 255, 0, 0.5);
   min-height: 30vh; }
 
-.weather-forecast {
-  background-color: rgba(255, 255, 0, 0.5);
+.hourly-forecast {
+  background-color: rgba(0, 255, 242, 0.5); }
+
+.next-3-days-forecast {
+  background-color: rgba(0, 47, 255, 0.5); }
+
+.next-5-days-forecast {
+  background-color: rgba(183, 0, 255, 0.5);
   min-height: 30vh; }
 
 .col-3, .col-4, .col-6, .col-12 {
   outline: 1px solid black; }
 
-body {
-  background-color: rgba(255, 255, 0, 0.5); }
-
-@media (min-width: 576px) {
-  body {
-    background-color: rgba(81, 255, 0, 0.5); } }
+div.weather-forecast__card:nth-child(7) {
+  border: 1px solid black; }
 
 @media (min-width: 768px) {
-  body {
-    background-color: rgba(0, 255, 213, 0.5); }
   div.col-12:nth-child(4) {
     display: block; }
   div.col-12:nth-child(5) {
     display: none; }
   div.col-12:nth-child(6) {
     display: block; } }
-
-@media (min-width: 992px) {
-  body {
-    background-color: rgba(0, 17, 255, 0.5); } }
-
-@media (min-width: 1200px) {
-  body {
-    background-color: rgba(255, 0, 119, 0.5); } }

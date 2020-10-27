@@ -13,26 +13,24 @@
   <main class="container">
     <div class="row">
 
-      <!-- A) Location and date -->
+      <!-- A) Current location and date -->
       <div class="col-12">
         <div class="current-location row">
-          <div class="current-location__content-container col-12">
-            <!-- Location name -->
-            <h5 class="current-location__name">City</h5>
-            <!-- Location date -->
-            <h5 class="current-location__date">Date</h5>
-          </div>
+          <!-- Location name -->
+          <h5 class="current-location__name col-12">City</h5>
+          <!-- Location date -->
+          <h5 class="current-location__date col-12">Date</h5>
         </div>
       </div>
 
       <!-- B) Current temperature -->
       <div class="col-12 col-md-6">
         <div class="current-temp row">
-          <!-- Temperature icon -->
+          <!-- Current temperature icon -->
           <div class="current-temp__icon-container col-6 d-flex flex-column justify-content-center align-items-center">
             <img class="current-temp__icon" src="https://via.placeholder.com/150" alt="" srcset="">
           </div>
-          <!-- Temperature degree and description -->
+          <!-- Current temperature value and description -->
           <div class="current-temp__content-container col-6 d-flex flex-column justify-content-center align-items-center">
             <!-- Current temperature value -->
             <div class="current-temp__value">
@@ -40,67 +38,66 @@
             </div>
             <!-- Current temperature description -->
             <div class="current-temp__description">
-              <!-- Change name??? (current-weather) -->
               Mostly sunny
             </div>
           </div>
         </div>
       </div>
 
-      <!-- C) Current stats -->
+      <!-- C) Daily stats -->
       <div class="col-12 col-md-6">
-        <div class="current-stats row text-center">
+        <div class="daily-stats row text-center">
           <!-- Daily max temp -->
-          <div class="daily-stats__max-temp col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="daily-stats__max-temp--value">
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__max-temp">
               23&deg;
             </div>
-            <div class="daily-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Max
             </div>
           </div>
-          <!-- Current wind speed -->
-          <div class="current-stats__wind-speed col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="current-stats__wind-speed--value">
+          <!-- Daily wind speed -->
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__wind-speed">
               10 kmph
             </div>
-            <div class="current-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Wind
             </div>
           </div>
           <!-- Daily sunrise time -->
-          <div class="daily-stats__sunrise col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="daily-stats__sunrise--value">
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__sunrise">
               05:25
             </div>
-            <div class="daily-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Sunrise
             </div>
           </div>
           <!-- Daily min temp -->
-          <div class="daily-stats__min-temp col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="daily-stats__min-temp--value">
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__min-temp">
               10&deg;
             </div>
-            <div class="daily-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Min
             </div>
           </div>
           <!-- Daily rain chance -->
-          <div class="daily-stats__rain-chance col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="daily-stats__rain-chance--value">
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__rain-chance">
               0%
             </div>
-            <div class="daily-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Rain
             </div>
           </div>
           <!-- Daily sunset time -->
-          <div class="daily-stats__sunset col-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="daily-stats__sunset--value">
+          <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="daily-stats__sunset">
               19:25
             </div>
-            <div class="daily-stats__section-title">
+            <div class="daily-stats__section-subtitle">
               Sunset
             </div>
           </div>
@@ -109,201 +106,261 @@
 
       <!-- D) Hourly forecast -->
       <div class="col-12">
-        <div class="weather-forecast row d-flex justify-content-around">
+        <div class="hourly-forecast row d-flex justify-content-around">
           <!-- Section title -->
-          <div class="weather-forecast__title col-12 d-flex justify-content-left align-items-center">
+          <div class="hourly-forecast__title col-12 d-flex justify-content-left align-items-center">
             <h5 class="m-0 p-0">Today's weather</h5>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-1--name m-0">Next (1)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-1--temps m-0">10 - 20</p>
+          
+          <!-- Next (1) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (1) hour -->
+            <p class="hourly-forecast__next-1-hour--name m-0">Next (1)</p>
+            <!-- Next (1) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (1) temps -->
+            <p class="hourly-forecast__next-1-hour--temps m-0">10 - 20</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-4--name m-0">Next (4)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-4--temps m-0">11 - 21</p>
+          
+          <!-- Next (4) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (4) hour -->
+            <p class="hourly-forecast__next-4-hour--name m-0">Next (4)</p>
+            <!-- Next (4) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (4) temps -->
+            <p class="hourly-forecast__next-4-hour--temps m-0">11 - 21</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-7--name m-0">Next (7)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-7--temps m-0">12 - 22</p>
+          
+          <!-- Next (7) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (7) hour -->
+            <p class="hourly-forecast__next-7-hour--name m-0">Next (7)</p>
+            <!-- Next (7) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (7) temps -->
+            <p class="hourly-forecast__next-7-hour--temps m-0">12 - 22</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-10--name m-0">Next (10)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-10--temps m-0">13 - 23</p>
+          
+          <!-- Next (10) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (10) hour -->
+            <p class="hourly-forecast__next-10-hour--name m-0">Next (10)</p>
+            <!-- Next (10) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (10) temps -->
+            <p class="hourly-forecast__next-10-hour--temps m-0">13 - 23</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-13--name m-0">Next (13)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-13--temps m-0">14 - 24</p>
+          
+          <!-- Next (13) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (13) hour -->
+            <p class="hourly-forecast__next-13-hour--name m-0">Next (13)</p>
+            <!-- Next (13) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (13) temps -->
+            <p class="hourly-forecast__next-13-hour--temps m-0">14 - 24</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-16--name m-0">Next (16)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-16--temps m-0">15 - 25</p>
+          
+          <!-- Next (16) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (16) hour -->
+            <p class="hourly-forecast__next-16-hour--name m-0">Next (16)</p>
+            <!-- Next (16) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (16) temps -->
+            <p class="hourly-forecast__next-16-hour--temps m-0">15 - 25</p>
           </div>
-          <!-- Hourly weather forecast card -->
-          <div class="weather-forecast__card col-auto d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--hour-19--name m-0">Next (19)</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--hour-19--temps m-0">16 - 26</p>
+          
+          <!-- Next (19) hour forecast card -->
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (19) hour -->
+            <p class="hourly-forecast__next-19-hour--name m-0">Next (19)</p>
+            <!-- Next (19) forecast icon -->
+            <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (19) temps -->
+            <p class="hourly-forecast__next-19-hour--temps m-0">16 - 26</p>
           </div>
         </div>
       </div>
 
       <!-- E) Next three days forecast -->
       <div class="col-12">
-        <div class="weather-forecast row d-flex justify-content-around">
+        <div class="next-3-days-forecast row d-flex justify-content-around">
           <!-- Section title -->
-          <div class="weather-forecast__title col-12 d-flex justify-content-left align-items-center">
+          <div class="next-3-days-forecast__title col-12 d-flex justify-content-left align-items-center">
             <h5 class="m-0 p-0">Next three days</h5>
           </div>
-          <!-- Daily weather forecast card -->
-          <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--day-1--name m-0">Mon</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--day-1--temps m-0">X</p>
+          
+          <!-- Next (1) day forecast card -->
+          <div class="next-3-days-forecast__content-container col-3 d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (1) day -->
+            <p class="next-3-days-forecast__next-1-day--name m-0">Mon</p>
+            <!-- Next (1) forecast icon -->
+            <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (1) temps -->
+            <p class="next-3-days-forecast__next-1-day--temps m-0">X</p>
           </div>
-          <!-- Daily weather forecast card -->
-          <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--day-2--name m-0">Tue</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--day-2--temps m-0">X</p>
+          
+          <!-- Next (2) day forecast card -->
+          <div class="next-3-days-forecast__content-container col-3 d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (2) day -->
+            <p class="next-3-days-forecast__next-2-day--name m-0">Tue</p>
+            <!-- Next (2) forecast icon -->
+            <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (2) temps -->
+            <p class="next-3-days-forecast__next-2-day--temps m-0">X</p>
           </div>
-          <!-- Daily weather forecast card -->
-          <div class="weather-forecast__card col-3 d-flex flex-column justify-content-around align-items-center">
-            <p class="weather-forecast__card--day-3--name m-0">Wed</p>
-            <img class="weather-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-            <p class="weather-forecast__card--day-3--temps m-0">X</p>
+          
+          <!-- Next (3) day forecast card -->
+          <div class="next-3-days-forecast__content-container col-3 d-flex flex-column justify-content-around align-items-center">
+            <!-- Next (3) day -->
+            <p class="next-3-days-forecast__next-3-day--name m-0">Wed</p>
+            <!-- Next (3) forecast icon -->
+            <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            <!-- Next (3) temps -->
+            <p class="next-3-days-forecast__next-3-day--temps m-0">X</p>
           </div>
         </div>
       </div>
 
       <!-- F) Next five days forecast -->
       <div class="col-12">
-        <div class="weather-forecast row d-flex justify-content-around">
+        <div class="next-5-days-forecast weather-forecast row d-flex justify-content-around">
           <!-- Section title -->
-          <div class="weather-forecast__title col-12 d-flex justify-content-left align-items-center">
+          <div class="next-5-days-forecast__title col-12 d-flex justify-content-left align-items-center">
             <h5 class="m-0 p-0">Next five days</h5>
           </div>
-          <!-- Daily weather forecast card -->
-          <div class="weather-five-days-forecast__card col-auto d-flex justify-content-around align-items-center w-100">
-            <div class="container-fluid">
-              <!-- First day -->
-              <div class="row d-flex justify-content-around w-100">
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--first-day--name-and-date m-0">Day/Date1</p>
-                </div>
-                <div class="col-2 text-center">
-                  <img class="weather-five-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--first-day--max-temp m-0">High</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--first-day--min-temp m-0">Low</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--first-day--wind-speed m-0">10kmph</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--first-day--rain-chance m-0">0%</p>
-                </div>
-              </div>
-              <!-- Second day -->
-              <div class="row d-flex justify-content-around w-100">
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--second-day--name-and-date m-0">Day/Date1</p>
-                </div>
-                <div class="col-2 text-center">
-                  <img class="weather-five-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--second-day--max-temp m-0">High</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--second-day--min-temp m-0">Low</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--second-day--wind-speed m-0">10kmph</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--second-day--rain-chance m-0">0%</p>
-                </div>
-              </div>
-              <!-- Third day -->
-              <div class="row d-flex justify-content-around w-100">
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--third-day--name-and-date m-0">Day/Date1</p>
-                </div>
-                <div class="col-2 text-center">
-                  <img class="weather-five-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--third-day--max-temp m-0">High</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--third-day--min-temp m-0">Low</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--third-day--wind-speed m-0">10kmph</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--third-day--rain-chance m-0">0%</p>
-                </div>
-              </div>
-              <!-- Fourth day -->
-              <div class="row d-flex justify-content-around w-100">
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fourth-day--name-and-date m-0">Day/Date1</p>
-                </div>
-                <div class="col-2 text-center">
-                  <img class="weather-five-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fourth-day--max-temp m-0">High</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fourth-day--min-temp m-0">Low</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fourth-day--wind-speed m-0">10kmph</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fourth-day--rain-chance m-0">0%</p>
-                </div>
-              </div>
-              <!-- Fifth day -->
-              <div class="row d-flex justify-content-around w-100">
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fifth-day--name-and-date m-0">Day/Date1</p>
-                </div>
-                <div class="col-2 text-center">
-                  <img class="weather-five-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fifth-day--max-temp m-0">High</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fifth-day--min-temp m-0">Low</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fifth-day--wind-speed m-0">10kmph</p>
-                </div>
-                <div class="col-2 text-center">
-                  <p class="weather-five-days-forecast__card--fifth-day--rain-chance m-0">0%</p>
-                </div>
-              </div>
+          
+          <!-- Next (1) day forecast card -->
+            <!-- Next (1) day and month -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-1-day--name m-0">Day/Date1</p>
             </div>
-          </div>
+            <!-- Next (1) forecast icon -->
+            <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
+              <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            </div>
+            <!-- Next (1) max temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-1-day--max-temp m-0">Max</p>
+            </div>
+            <!-- Next (1) min temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-1-day--min-temp m-0">Min</p>
+            </div>
+            <!-- Next (1) wind speed -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-1-day--wind-speed m-0">10kmph</p>
+            </div>
+            <!-- Next (1) rain chance -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-1-day--rain-chance m-0">0%</p>
+            </div>
+          
+          <!-- Next (2) day forecast card -->
+            <!-- Next (2) day and month -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-2-day--name m-0">Day/Date1</p>
+            </div>
+            <!-- Next (2) forecast icon -->
+            <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
+              <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            </div>
+            <!-- Next (2) max temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-2-day--max-temp m-0">Max</p>
+            </div>
+            <!-- Next (2) min temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-2-day--min-temp m-0">Min</p>
+            </div>
+            <!-- Next (2) wind speed -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-2-day--wind-speed m-0">10kmph</p>
+            </div>
+            <!-- Next (2) rain chance -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-2-day--rain-chance m-0">0%</p>
+            </div>
+          
+          <!-- Next (3) day forecast card -->
+            <!-- Next (3) day and month -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-3-day--name m-0">Day/Date1</p>
+            </div>
+            <!-- Next (3) forecast icon -->
+            <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
+              <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            </div>
+            <!-- Next (3) max temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-3-day--max-temp m-0">Max</p>
+            </div>
+            <!-- Next (3) min temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-3-day--min-temp m-0">Min</p>
+            </div>
+            <!-- Next (3) wind speed -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-3-day--wind-speed m-0">10kmph</p>
+            </div>
+            <!-- Next (3) rain chance -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-3-day--rain-chance m-0">0%</p>
+            </div>
+          
+          <!-- Next (4) day forecast card -->
+            <!-- Next (4) day and month -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-4-day--name m-0">Day/Date1</p>
+            </div>
+            <!-- Next (4) forecast icon -->
+            <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
+              <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            </div>
+            <!-- Next (4) max temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-4-day--max-temp m-0">Max</p>
+            </div>
+            <!-- Next (4) min temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-4-day--min-temp m-0">Min</p>
+            </div>
+            <!-- Next (4) wind speed -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-4-day--wind-speed m-0">10kmph</p>
+            </div>
+            <!-- Next (4) rain chance -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-4-day--rain-chance m-0">0%</p>
+            </div>
+          
+          <!-- Next (5) day forecast card -->
+            <!-- Next (5) day and month -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-5-day--name m-0">Day/Date1</p>
+            </div>
+            <!-- Next (5) forecast icon -->
+            <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
+              <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset="">
+            </div>
+            <!-- Next (5) max temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-5-day--max-temp m-0">Max</p>
+            </div>
+            <!-- Next (5) min temp -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-5-day--min-temp m-0">Min</p>
+            </div>
+            <!-- Next (5) wind speed -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-5-day--wind-speed m-0">10kmph</p>
+            </div>
+            <!-- Next (5) rain chance -->
+            <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
+              <p class="next-5-days-forecast__next-5-day--rain-chance m-0">0%</p>
+            </div>
         </div>
       </div>
 
