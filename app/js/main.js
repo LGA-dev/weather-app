@@ -203,7 +203,7 @@ window.addEventListener('load', ()=> {
           // ## Display data ##
 
           // Current location
-          currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
+          // currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
           currentForecast__CurrentDate.textContent = currentForecast__CurrentDate_value;
 
           // Current forecast
@@ -214,7 +214,7 @@ window.addEventListener('load', ()=> {
           dailyForecast__MaxTemp.textContent = parseInt(dailyForecast__MaxTemp_value) + '°';
           dailyForecast__MinTemp.textContent = parseInt(dailyForecast__MinTemp_value) + '°';
           dailyForecast__WindSpeed.textContent = parseInt(dailyForecast__WindSpeed_value);
-          dailyForecast__RainChance.textContent = dailyForecast__RainChance_value + "%";
+          dailyForecast__RainChance.textContent = parseInt(dailyForecast__RainChance_value*100) + "%";
           dailyForecast__SunriseTime.textContent = dailyForecast__SunriseTime_value;
           dailyForecast__SunsetTime.textContent = dailyForecast__SunsetTime_value;
 

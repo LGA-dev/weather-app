@@ -32,6 +32,28 @@
   body {
     // background-color: rgba(0, 17, 255, 0.5);
   }
+
+  .current-location {
+    // min-height: 10vh;
+    // min-height: 10vh;
+  }
+
+  .current-temp,
+  .daily-stats {
+    // background-color: rgba(162, 0, 255, 0.5);
+    // min-height: 20vh;
+    // border: 1px solid blue;
+  }
+
+  .hourly-forecast {
+    // background-color: rgba(0, 89, 255, 0.5);
+    // min-height: 30vh;
+  }
+
+  .next-5-days-forecast {
+    // background-color: rgba(183, 0, 255, 0.5);
+    // min-height: 20vh;
+  }
 }
 
 @include media-breakpoint-up(xl) {
