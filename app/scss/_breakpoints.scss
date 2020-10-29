@@ -1,19 +1,41 @@
+// Extra small devices (portrait phones, less than 576px)
+// This is the default in Bootstrap
 @include media-breakpoint-up(xs) {
-  body {
-    // background-color: rgba(255, 255, 0, 0.5);
+  // body {
+  //   background-color: rgba(255, 255, 0, 0.5);
+  // }
+
+  // !! Use bootstrap classes for this later
+
+  //Hide section D (xs,sm)
+  div.col-12:nth-child(4) {
+    display: none;
+  }
+
+  //Hide section F (xs,sm)
+  div.col-12:nth-child(6) {
+    display: none;
   }
 }
 
+
+// Small devices (landscape phones, 576px and up)
+// Does this media query ever gets used?
 @include media-breakpoint-up(sm) {
-  body {
-    // background-color: rgba(81, 255, 0, 0.5);
-  }
+  // body {
+  //   background-color: rgba(81, 255, 0, 0.5);
+  // }
 }
 
+
+// Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
-  body {
-    // background-color: rgba(0, 255, 213, 0.5);
-  }
+  // body {
+  //   background-color: rgba(0, 255, 213, 0.5);
+  // }
+
+  // !! Use bootstrap classes for this later
+
   // Display section D (md,lg,xl)
   div.col-12:nth-child(4) {
     display: block;
@@ -26,38 +48,24 @@
   div.col-12:nth-child(6) {
     display: block;
   }
+  // Self align center to daily stats section
+  div.col-12:nth-child(3) {
+    align-self: center;
+  }
 }
 
+
+// Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) {
-  body {
-    // background-color: rgba(0, 17, 255, 0.5);
-  }
-
-  .current-location {
-    // min-height: 10vh;
-    // min-height: 10vh;
-  }
-
-  .current-temp,
-  .daily-stats {
-    // background-color: rgba(162, 0, 255, 0.5);
-    // min-height: 20vh;
-    // border: 1px solid blue;
-  }
-
-  .hourly-forecast {
-    // background-color: rgba(0, 89, 255, 0.5);
-    // min-height: 30vh;
-  }
-
-  .next-5-days-forecast {
-    // background-color: rgba(183, 0, 255, 0.5);
-    // min-height: 20vh;
-  }
+  // body {
+  //   background-color: rgba(0, 17, 255, 0.5);
+  // }
 }
 
+
+// Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) {
-  body {
-    // background-color: rgba(255, 0, 119, 0.5);
-  }
+  // body {
+  //   background-color: rgba(255, 0, 119, 0.5);
+  // }
 }

@@ -8,72 +8,42 @@
 
 
 html {
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
+  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%;
-}
-
-.container {
-  outline: 1px solid red;
-  // height: 100vh;
-}
-
-html body main.container div.row {
-  // height: 100%;
 }
 
 .font-size-1 {
   font-size: 1.1rem ;
-  color: red;
+  // color: red;
 }
 
-//Hide section D (xs,sm)
-div.col-12:nth-child(4) {
-  display: none;
-}
+// .container {
+//   outline: 1px solid red;
+// }
 
-//Hide section F (xs,sm)
-div.col-12:nth-child(6) {
-  display: none;
-}
+// .current-location {
+//   background-color: rgba(255, 0, 0, 0.5);
+// }
 
-.current-location {
-  // background-color: rgba(255, 0, 0, 0.5);
-  // min-height: 10vh;
-  // height: 10vh;
-}
+// .current-temp {
+//   background-color: rgba(238, 255, 0, 0.5);
+// }
 
-.current-temp {
-  // background-color: rgba(238, 255, 0, 0.5);
-  // min-height: 30vh;
-  // min-height: 30vh;
-}
+// .daily-stats {
+//   background-color: rgba(0, 255, 0, 0.5);
+// }
 
-.daily-stats {
-  // background-color: rgba(0, 255, 0, 0.5);
-  // min-height: 30vh;
-  // min-height: 30vh;
-}
+// .next-3-days-forecast {
+//   background-color: rgba(0, 47, 255, 0.5);
+// }
 
+// .hourly-forecast {
+//   background-color: rgba(0, 255, 242, 0.5);
+// }
 
-.next-3-days-forecast {
-  // background-color: rgba(0, 47, 255, 0.5);
-  // height: 100%;
-  // height: 30vh;
-}
-
-// Tablet/Desktop only
-
-.hourly-forecast {
-  // background-color: rgba(0, 255, 242, 0.5);
-  // height: 20vh;
-}
-
-
-.next-5-days-forecast {
-  // background-color: rgba(183, 0, 255, 0.5);
-  // min-height: 30vh;
-  // height: 45vh;
-}
+// .next-5-days-forecast {
+//   background-color: rgba(183, 0, 255, 0.5);
+// }
 
 // Only way to make it work
 .align-content-between {
