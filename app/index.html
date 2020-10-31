@@ -30,7 +30,10 @@
           <!-- Current temperature icon -->
           <div class="current-temp__icon-container col-6 d-flex flex-column justify-content-center align-items-center">
             <!-- <img class="current-temp__icon" src="https://via.placeholder.com/150" alt="" srcset=""> -->
-            <i class="wi wi-day-sunny"></i>
+            <!-- <i class="wi wi-day-sunny"></i> -->
+            <!-- <img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'> -->
+            <!-- <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" srcset=""> -->
+            <img id="current-temp__icon" src="" alt="" srcset="">
           </div>
           <!-- Current temperature value and description -->
           <div class="current-temp__content-container col-6 d-flex flex-column justify-content-center align-items-center">
@@ -121,7 +124,7 @@
             <!-- Next (1) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-1" src="" alt="" srcset="">
             </div>
             <!-- Next (1) temps -->
             <p class="hourly-forecast__next-1-hour--temps m-0 font-size-1">10 - 20</p>
@@ -134,7 +137,7 @@
             <!-- Next (4) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-4" src="" alt="" srcset="">
             </div>
             <!-- Next (4) temps -->
             <p class="hourly-forecast__next-4-hour--temps m-0 font-size-1">11 - 21</p>
@@ -147,7 +150,7 @@
             <!-- Next (7) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-7" src="" alt="" srcset="">
             </div>
             <!-- Next (7) temps -->
             <p class="hourly-forecast__next-7-hour--temps m-0 font-size-1">12 - 22</p>
@@ -160,7 +163,7 @@
             <!-- Next (10) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-10" src="" alt="" srcset="">
             </div>
             <!-- Next (10) temps -->
             <p class="hourly-forecast__next-10-hour--temps m-0 font-size-1">13 - 23</p>
@@ -173,7 +176,7 @@
             <!-- Next (13) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-13" src="" alt="" srcset="">
             </div>
             <!-- Next (13) temps -->
             <p class="hourly-forecast__next-13-hour--temps m-0 font-size-1">14 - 24</p>
@@ -186,7 +189,7 @@
             <!-- Next (16) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-16" src="" alt="" srcset="">
             </div>
             <!-- Next (16) temps -->
             <p class="hourly-forecast__next-16-hour--temps m-0 font-size-1">15 - 25</p>
@@ -199,7 +202,7 @@
             <!-- Next (19) forecast icon -->
             <!-- <img class="hourly-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="hourly-forecast__icon_container">
-              <i class="wi wi-day-sunny"></i>
+              <img id="hourly-forecast__icon-19" src="" alt="" srcset="">
             </div>
             <!-- Next (19) temps -->
             <p class="hourly-forecast__next-19-hour--temps m-0 font-size-1">16 - 26</p>
@@ -223,7 +226,7 @@
             <!-- Next (1) forecast icon -->
             <!-- <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="next-3-days-forecast__icon_container">
-              <i class="wi wi-day-sunny my-2"></i>
+              <img id="next-3-days-forecast__icon-1" src="" alt="" srcset="">
             </div>
             <!-- Next (1) temps -->
             <div class="next-3-days-forecast__next-1-day--temps my-1 font-size-1">X</div>
@@ -236,7 +239,7 @@
             <!-- Next (2) forecast icon -->
             <!-- <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="next-3-days-forecast__icon_container">
-              <i class="wi wi-day-sunny my-2"></i>
+              <img id="next-3-days-forecast__icon-2" src="" alt="" srcset="">
             </div>
             <!-- Next (2) temps -->
             <div class="next-3-days-forecast__next-2-day--temps my-1 font-size-1">X</div>
@@ -249,7 +252,7 @@
             <!-- Next (3) forecast icon -->
             <!-- <img class="next-3-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
             <div class="next-3-days-forecast__icon_container">
-              <i class="wi wi-day-sunny my-2"></i>
+              <img id="next-3-days-forecast__icon-3" src="" alt="" srcset="">
             </div>
             <!-- Next (3) temps -->
             <div class="next-3-days-forecast__next-3-day--temps my-1 font-size-1">X</div>
@@ -274,7 +277,7 @@
             <!-- Next (1) forecast icon -->
             <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
               <!-- <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
-              <i class="wi wi-day-sunny"></i>
+              <img id="next-5-days-forecast__icon-1" src="" alt="" srcset="">
             </div>
             <!-- Next (1) max temp -->
             <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
@@ -301,7 +304,7 @@
             <!-- Next (2) forecast icon -->
             <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
               <!-- <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
-              <i class="wi wi-day-sunny"></i>
+              <img id="next-5-days-forecast__icon-2" src="" alt="" srcset="">
             </div>
             <!-- Next (2) max temp -->
             <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
@@ -328,7 +331,7 @@
             <!-- Next (3) forecast icon -->
             <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
               <!-- <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
-              <i class="wi wi-day-sunny"></i>
+              <img id="next-5-days-forecast__icon-3" src="" alt="" srcset="">
             </div>
             <!-- Next (3) max temp -->
             <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
@@ -355,7 +358,7 @@
             <!-- Next (4) forecast icon -->
             <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
               <!-- <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
-              <i class="wi wi-day-sunny"></i>
+              <img id="next-5-days-forecast__icon-4" src="" alt="" srcset="">
             </div>
             <!-- Next (4) max temp -->
             <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">
@@ -382,7 +385,7 @@
             <!-- Next (5) forecast icon -->
             <div class="next-5-days-forecast__icon_container col-2 d-flex justify-content-around align-items-center text-center">
               <!-- <img class="next-5-days-forecast__icon" src="https://via.placeholder.com/50x50" alt="" srcset=""> -->
-              <i class="wi wi-day-sunny"></i>
+              <img id="next-5-days-forecast__icon-5" src="" alt="" srcset="">
             </div>
             <!-- Next (5) max temp -->
             <div class="next-5-days-forecast__content_container col-2 d-flex justify-content-around align-items-center text-center">

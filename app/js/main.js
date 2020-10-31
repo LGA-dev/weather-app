@@ -89,7 +89,6 @@ window.addEventListener('load', ()=> {
   let fiveDaysForecast__FifthDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-5-day--wind-speed");
   let fiveDaysForecast__FifthDay_RainChance = document.querySelector(".next-5-days-forecast__next-5-day--rain-chance");
 
-
   // ## Get location ##
   if(navigator.geolocation){
     // ## Get the current position of the device ##
@@ -99,7 +98,8 @@ window.addEventListener('load', ()=> {
       lat  = position.coords.latitude;
 
       // ## GET Request ##
-      const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      const api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
       fetch(api)
 
         // ## Return api as JSON ##
@@ -199,11 +199,10 @@ window.addEventListener('load', ()=> {
           const fiveDaysForecast__FifthDay_WindSpeed_value = data.daily[5].wind_speed;
           const fiveDaysForecast__FifthDay_RainChance_value = data.daily[5].pop;
 
-
           // ## Display data ##
 
           // Current location
-          // currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
+          currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
           currentForecast__CurrentDate.textContent = currentForecast__CurrentDate_value;
 
           // Current forecast
@@ -287,6 +286,65 @@ window.addEventListener('load', ()=> {
 
           // Console logs for test
           console.log(data);
+
+          // ## Icons ##
+          // Current weather icon
+          let currentIcon = data.current.weather[0].icon;
+          document.getElementById("current-temp__icon").src = `http://openweathermap.org/img/wn/${currentIcon}@2x.png`;
+
+          // Hourly weather icon
+          let hourlyIcon1 = data.hourly[1].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-1").src = `http://openweathermap.org/img/wn/${hourlyIcon1}@2x.png`;
+
+          let hourlyIcon4 = data.hourly[4].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-4").src = `http://openweathermap.org/img/wn/${hourlyIcon4}@2x.png`;
+
+          let hourlyIcon7 = data.hourly[7].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-7").src = `http://openweathermap.org/img/wn/${hourlyIcon7}@2x.png`;
+
+          let hourlyIcon10 = data.hourly[10].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-10").src = `http://openweathermap.org/img/wn/${hourlyIcon10}@2x.png`;
+
+          let hourlyIcon13 = data.hourly[13].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-13").src = `http://openweathermap.org/img/wn/${hourlyIcon13}@2x.png`;
+
+          let hourlyIcon16 = data.hourly[16].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-16").src = `http://openweathermap.org/img/wn/${hourlyIcon16}@2x.png`;
+
+          let hourlyIcon19 = data.hourly[19].weather[0].icon;
+          document.getElementById("hourly-forecast__icon-19").src = `http://openweathermap.org/img/wn/${hourlyIcon19}@2x.png`;
+
+          // Next three days weather icon
+          let next3DailyIcon1 = data.daily[1].weather[0].icon;
+          document.getElementById("next-3-days-forecast__icon-1").src = `http://openweathermap.org/img/wn/${next3DailyIcon1}@2x.png`;
+
+          let next3DailyIcon2 = data.daily[2].weather[0].icon;
+          document.getElementById("next-3-days-forecast__icon-2").src = `http://openweathermap.org/img/wn/${next3DailyIcon2}@2x.png`;
+
+          let next3DailyIcon3 = data.daily[3].weather[0].icon;
+          document.getElementById("next-3-days-forecast__icon-3").src = `http://openweathermap.org/img/wn/${next3DailyIcon3}@2x.png`;
+
+          // Next five days weather icon
+          let next5DailyIcon1 = data.daily[1].weather[0].icon;
+          document.getElementById("next-5-days-forecast__icon-1").src = `http://openweathermap.org/img/wn/${next5DailyIcon1}.png`;
+
+          let next5DailyIcon2 = data.daily[2].weather[0].icon;
+          document.getElementById("next-5-days-forecast__icon-2").src = `http://openweathermap.org/img/wn/${next5DailyIcon2}.png`;
+
+          let next5DailyIcon3 = data.daily[3].weather[0].icon;
+          document.getElementById("next-5-days-forecast__icon-3").src = `http://openweathermap.org/img/wn/${next5DailyIcon3}.png`;
+
+          let next5DailyIcon4 = data.daily[4].weather[0].icon;
+          document.getElementById("next-5-days-forecast__icon-4").src = `http://openweathermap.org/img/wn/${next5DailyIcon4}.png`;
+
+          let next5DailyIcon5 = data.daily[5].weather[0].icon;
+          document.getElementById("next-5-days-forecast__icon-5").src = `http://openweathermap.org/img/wn/${next5DailyIcon5}.png`;
+
+          // Test
+          console.log(currentIcon);
+          console.log(hourlyIcon1);
+          console.log(next3DailyIcon1);
+          console.log(next5DailyIcon1);
         })
     })
   }
