@@ -99,7 +99,7 @@ window.addEventListener('load', ()=> {
       lat  = position.coords.latitude;
 
       // ## GET Request ##
-      const api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
       fetch(api)
 
         // ## Return api as JSON ##
@@ -346,7 +346,7 @@ function convertUnixTimeStampToDayMonth(timestamp) {
   let month = date.getMonth();
 
   // Display time in day name
-  let formattedTime = (day + 1) + "/" + (month + 1);
+  let formattedTime = day + "/" + (month + 1);
   // console.log(formattedTime);
   return formattedTime;
 }
