@@ -60,30 +60,35 @@ window.addEventListener('load', ()=> {
   // Five days forecast (F) variables
   // ** Day 1/5 **
   let fiveDaysForecast__FirstDay_Name = document.querySelector(".next-5-days-forecast__next-1-day--name");
+  let fiveDaysForecast__FirstDay_Date = document.querySelector(".next-5-days-forecast__next-1-day--date");
   let fiveDaysForecast__FirstDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-1-day--max-temp");
   let fiveDaysForecast__FirstDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-1-day--min-temp");
   let fiveDaysForecast__FirstDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-1-day--wind-speed");
   let fiveDaysForecast__FirstDay_RainChance = document.querySelector(".next-5-days-forecast__next-1-day--rain-chance");
   // ** Day 2/5 **
   let fiveDaysForecast__SecondDay_Name = document.querySelector(".next-5-days-forecast__next-2-day--name");
+  let fiveDaysForecast__SecondDay_Date = document.querySelector(".next-5-days-forecast__next-2-day--date");
   let fiveDaysForecast__SecondDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-2-day--max-temp");
   let fiveDaysForecast__SecondDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-2-day--min-temp");
   let fiveDaysForecast__SecondDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-2-day--wind-speed");
   let fiveDaysForecast__SecondDay_RainChance = document.querySelector(".next-5-days-forecast__next-2-day--rain-chance");
   // ** Day 3/5 **
   let fiveDaysForecast__ThirdDay_Name = document.querySelector(".next-5-days-forecast__next-3-day--name");
+  let fiveDaysForecast__ThirdDay_Date = document.querySelector(".next-5-days-forecast__next-3-day--date");
   let fiveDaysForecast__ThirdDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-3-day--max-temp");
   let fiveDaysForecast__ThirdDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-3-day--min-temp");
   let fiveDaysForecast__ThirdDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-3-day--wind-speed");
   let fiveDaysForecast__ThirdDay_RainChance = document.querySelector(".next-5-days-forecast__next-3-day--rain-chance");
   // ** Day 4/5 **
   let fiveDaysForecast__FourthDay_Name = document.querySelector(".next-5-days-forecast__next-4-day--name");
+  let fiveDaysForecast__FourthDay_Date = document.querySelector(".next-5-days-forecast__next-4-day--date");
   let fiveDaysForecast__FourthDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-4-day--max-temp");
   let fiveDaysForecast__FourthDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-4-day--min-temp");
   let fiveDaysForecast__FourthDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-4-day--wind-speed");
   let fiveDaysForecast__FourthDay_RainChance = document.querySelector(".next-5-days-forecast__next-4-day--rain-chance");
   // ** Day 5/5 **
   let fiveDaysForecast__FifthDay_Name = document.querySelector(".next-5-days-forecast__next-5-day--name");
+  let fiveDaysForecast__FifthDay_Date = document.querySelector(".next-5-days-forecast__next-5-day--date");
   let fiveDaysForecast__FifthDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-5-day--max-temp");
   let fiveDaysForecast__FifthDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-5-day--min-temp");
   let fiveDaysForecast__FifthDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-5-day--wind-speed");
@@ -169,31 +174,36 @@ window.addEventListener('load', ()=> {
           
           // Five days forecast values
           // ** Day 1/5 **
-          const fiveDaysForecast__FirstDay_Name_value = convertUnixTimeStampToDayMonth(data.daily[1].dt);
+          const fiveDaysForecast__FirstDay_Name_value = convertUnixTimeStampToDay(data.daily[1].dt);
+          const fiveDaysForecast__FirstDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[1].dt);
           const fiveDaysForecast__FirstDay_MaxTemp_value = data.daily[1].temp.max;
           const fiveDaysForecast__FirstDay_MinTemp_value = data.daily[1].temp.min;
           const fiveDaysForecast__FirstDay_WindSpeed_value = data.daily[1].wind_speed;
           const fiveDaysForecast__FirstDay_RainChance_value = data.daily[1].pop;
           // ** Day 2/5 **
-          const fiveDaysForecast__SecondDay_Name_value = convertUnixTimeStampToDayMonth(data.daily[2].dt);
+          const fiveDaysForecast__SecondDay_Name_value = convertUnixTimeStampToDay(data.daily[2].dt);
+          const fiveDaysForecast__SecondDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[2].dt);
           const fiveDaysForecast__SecondDay_MaxTemp_value = data.daily[2].temp.max;
           const fiveDaysForecast__SecondDay_MinTemp_value = data.daily[2].temp.min;
           const fiveDaysForecast__SecondDay_WindSpeed_value = data.daily[2].wind_speed;
           const fiveDaysForecast__SecondDay_RainChance_value = data.daily[2].pop;
           // ** Day 3/5 **
-          const fiveDaysForecast__ThirdDay_Name_value = convertUnixTimeStampToDayMonth(data.daily[3].dt);
+          const fiveDaysForecast__ThirdDay_Name_value = convertUnixTimeStampToDay(data.daily[3].dt);
+          const fiveDaysForecast__ThirdDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[3].dt);
           const fiveDaysForecast__ThirdDay_MaxTemp_value = data.daily[3].temp.max;
           const fiveDaysForecast__ThirdDay_MinTemp_value = data.daily[3].temp.min;
           const fiveDaysForecast__ThirdDay_WindSpeed_value = data.daily[3].wind_speed;
           const fiveDaysForecast__ThirdDay_RainChance_value = data.daily[3].pop;
           // ** Day 4/5 **
-          const fiveDaysForecast__FourthDay_Name_value = convertUnixTimeStampToDayMonth(data.daily[4].dt);
+          const fiveDaysForecast__FourthDay_Name_value = convertUnixTimeStampToDay(data.daily[4].dt);
+          const fiveDaysForecast__FourthDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[4].dt);
           const fiveDaysForecast__FourthDay_MaxTemp_value = data.daily[4].temp.max;
           const fiveDaysForecast__FourthDay_MinTemp_value = data.daily[4].temp.min;
           const fiveDaysForecast__FourthDay_WindSpeed_value = data.daily[4].wind_speed;
           const fiveDaysForecast__FourthDay_RainChance_value = data.daily[4].pop;
           // ** Day 5/5 **
-          const fiveDaysForecast__FifthDay_Name_value = convertUnixTimeStampToDayMonth(data.daily[5].dt);
+          const fiveDaysForecast__FifthDay_Name_value = convertUnixTimeStampToDay(data.daily[5].dt);
+          const fiveDaysForecast__FifthDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[5].dt);
           const fiveDaysForecast__FifthDay_MaxTemp_value = data.daily[5].temp.max;
           const fiveDaysForecast__FifthDay_MinTemp_value = data.daily[5].temp.min;
           const fiveDaysForecast__FifthDay_WindSpeed_value = data.daily[5].wind_speed;
@@ -207,7 +217,7 @@ window.addEventListener('load', ()=> {
 
           // Current forecast
           currentForecast__CurrentTemp.textContent = parseInt(currentForecast__CurrentTemp_value) + '°';
-          currentForecast__CurrentTempDescription.textContent = currentForecast__CurrentTempDescription_value;
+          currentForecast__CurrentTempDescription.textContent = currentForecast__CurrentTempDescription_value.toUpperCase();
 
           // Daily forecast
           dailyForecast__MaxTemp.textContent = parseInt(dailyForecast__MaxTemp_value) + '°';
@@ -255,30 +265,35 @@ window.addEventListener('load', ()=> {
           // Five days forecast
           // ** Display next (1) day **
           fiveDaysForecast__FirstDay_Name.textContent = fiveDaysForecast__FirstDay_Name_value;
+          fiveDaysForecast__FirstDay_Date.textContent = fiveDaysForecast__FirstDay_Date_value;
           fiveDaysForecast__FirstDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MaxTemp_value) + '°';
           fiveDaysForecast__FirstDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MinTemp_value) + '°';
           fiveDaysForecast__FirstDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FirstDay_WindSpeed_value);
           fiveDaysForecast__FirstDay_RainChance.textContent = (fiveDaysForecast__FirstDay_RainChance_value*100) + '%';
           // ** Display next (2) day **
           fiveDaysForecast__SecondDay_Name.textContent = fiveDaysForecast__SecondDay_Name_value;
+          fiveDaysForecast__SecondDay_Date.textContent = fiveDaysForecast__SecondDay_Date_value;
           fiveDaysForecast__SecondDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MaxTemp_value) + '°';
           fiveDaysForecast__SecondDay_MinTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MinTemp_value) + '°';
           fiveDaysForecast__SecondDay_WindSpeed.textContent = parseInt(fiveDaysForecast__SecondDay_WindSpeed_value);
           fiveDaysForecast__SecondDay_RainChance.textContent = (fiveDaysForecast__SecondDay_RainChance_value*100) + '%';
           // ** Display next (3) day **
           fiveDaysForecast__ThirdDay_Name.textContent = fiveDaysForecast__ThirdDay_Name_value;
+          fiveDaysForecast__ThirdDay_Date.textContent = fiveDaysForecast__ThirdDay_Date_value;
           fiveDaysForecast__ThirdDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MaxTemp_value) + '°';
           fiveDaysForecast__ThirdDay_MinTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MinTemp_value) + '°';
           fiveDaysForecast__ThirdDay_WindSpeed.textContent = parseInt(fiveDaysForecast__ThirdDay_WindSpeed_value);
           fiveDaysForecast__ThirdDay_RainChance.textContent = (fiveDaysForecast__ThirdDay_RainChance_value*100) + '%';
           // ** Display next (4) day **
           fiveDaysForecast__FourthDay_Name.textContent = fiveDaysForecast__FourthDay_Name_value;
+          fiveDaysForecast__FourthDay_Date.textContent = fiveDaysForecast__FourthDay_Date_value;
           fiveDaysForecast__FourthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FourthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MinTemp_value) + '°';
           fiveDaysForecast__FourthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FourthDay_WindSpeed_value);
           fiveDaysForecast__FourthDay_RainChance.textContent = (fiveDaysForecast__FourthDay_RainChance_value*100) + '%';
           // ** Display next (5) day **
           fiveDaysForecast__FifthDay_Name.textContent = fiveDaysForecast__FifthDay_Name_value;
+          fiveDaysForecast__FifthDay_Date.textContent = fiveDaysForecast__FifthDay_Date_value;
           fiveDaysForecast__FifthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FifthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MinTemp_value) + '°';
           fiveDaysForecast__FifthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FifthDay_WindSpeed_value);
@@ -294,25 +309,25 @@ window.addEventListener('load', ()=> {
 
           // Hourly weather icon
           let hourlyIcon1 = data.hourly[1].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-1").src = `http://openweathermap.org/img/wn/${hourlyIcon1}@2x.png`;
+          document.getElementById("hourly-forecast__icon-1").src = `http://openweathermap.org/img/wn/${hourlyIcon1}.png`;
 
           let hourlyIcon4 = data.hourly[4].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-4").src = `http://openweathermap.org/img/wn/${hourlyIcon4}@2x.png`;
+          document.getElementById("hourly-forecast__icon-4").src = `http://openweathermap.org/img/wn/${hourlyIcon4}.png`;
 
           let hourlyIcon7 = data.hourly[7].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-7").src = `http://openweathermap.org/img/wn/${hourlyIcon7}@2x.png`;
+          document.getElementById("hourly-forecast__icon-7").src = `http://openweathermap.org/img/wn/${hourlyIcon7}.png`;
 
           let hourlyIcon10 = data.hourly[10].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-10").src = `http://openweathermap.org/img/wn/${hourlyIcon10}@2x.png`;
+          document.getElementById("hourly-forecast__icon-10").src = `http://openweathermap.org/img/wn/${hourlyIcon10}.png`;
 
           let hourlyIcon13 = data.hourly[13].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-13").src = `http://openweathermap.org/img/wn/${hourlyIcon13}@2x.png`;
+          document.getElementById("hourly-forecast__icon-13").src = `http://openweathermap.org/img/wn/${hourlyIcon13}.png`;
 
           let hourlyIcon16 = data.hourly[16].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-16").src = `http://openweathermap.org/img/wn/${hourlyIcon16}@2x.png`;
+          document.getElementById("hourly-forecast__icon-16").src = `http://openweathermap.org/img/wn/${hourlyIcon16}.png`;
 
           let hourlyIcon19 = data.hourly[19].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-19").src = `http://openweathermap.org/img/wn/${hourlyIcon19}@2x.png`;
+          document.getElementById("hourly-forecast__icon-19").src = `http://openweathermap.org/img/wn/${hourlyIcon19}.png`;
 
           // Next three days weather icon
           let next3DailyIcon1 = data.daily[1].weather[0].icon;
@@ -378,13 +393,13 @@ function convertUnixTimeStampToDay(timestamp) {
   let day = date.getDay();
   // Return the name of the day instead of a number
   let weekday = new Array(7);
-  weekday[0] = "Sunday";
-  weekday[1] = "Monday";
-  weekday[2] = "Tuesday";
-  weekday[3] = "Wednesday";
-  weekday[4] = "Thursday";
-  weekday[5] = "Friday";
-  weekday[6] = "Saturday";
+  weekday[0] = "Sun";
+  weekday[1] = "Mon";
+  weekday[2] = "Tue";
+  weekday[3] = "Wed";
+  weekday[4] = "Thur";
+  weekday[5] = "Fri";
+  weekday[6] = "Sat";
 
   // Display time in day name
   let formattedTime = weekday[day];

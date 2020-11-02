@@ -12,10 +12,31 @@ html {
   height: 100%;
 }
 
+// body {
+//   background-color: #222;
+//   color: #ececec;
+// }
+
 .font-size-1 {
   font-size: 1.1rem ;
+  font-weight: bold;
   // color: red;
 }
+
+.font-size-5 {
+  font-size: 2rem;
+  font-weight: bold;
+  // color: cyan;
+}
+
+// Only way to make it work
+.align-content-between {
+  height: 100vh;
+}
+
+// html body.bg-dark.text-white main.container div.row.d-flex.align-content-between div.col-12.col-md-6 div.current-temp.row {
+//   border: 2px solid red;
+// }
 
 // .container {
 //   outline: 1px solid red;
@@ -44,10 +65,5 @@ html {
 // .next-5-days-forecast {
 //   background-color: rgba(183, 0, 255, 0.5);
 // }
-
-// Only way to make it work
-.align-content-between {
-  height: 100vh;
-}
 
 @import 'breakpoints';
