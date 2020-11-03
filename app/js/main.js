@@ -16,9 +16,9 @@ window.addEventListener('load', ()=> {
   let dailyForecast__MaxTemp = document.querySelector(".daily-stats__max-temp");
   let dailyForecast__MinTemp = document.querySelector(".daily-stats__min-temp");
   let dailyForecast__RainChance = document.querySelector(".daily-stats__rain-chance");
-  let dailyForecast__WindSpeed = document.querySelector(".daily-stats__wind-speed");
-  let dailyForecast__SunriseTime = document.querySelector(".daily-stats__sunrise");
-  let dailyForecast__SunsetTime = document.querySelector(".daily-stats__sunset");
+  let dailyForecast__HumidityPercentage = document.querySelector(".daily-stats__humidity-percentage");
+  let dailyForecast__SunriseTime = document.querySelector(".daily-stats__sunrise-time");
+  let dailyForecast__SunsetTime = document.querySelector(".daily-stats__sunset-time");
 
 
   // Hourly forecast (D) variables
@@ -63,35 +63,35 @@ window.addEventListener('load', ()=> {
   let fiveDaysForecast__FirstDay_Date = document.querySelector(".next-5-days-forecast__next-1-day--date");
   let fiveDaysForecast__FirstDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-1-day--max-temp");
   let fiveDaysForecast__FirstDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-1-day--min-temp");
-  let fiveDaysForecast__FirstDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-1-day--wind-speed");
+  let fiveDaysForecast__FirstDay_HumidityPercentage = document.querySelector(".next-5-days-forecast__next-1-day--humidity-percentage");
   let fiveDaysForecast__FirstDay_RainChance = document.querySelector(".next-5-days-forecast__next-1-day--rain-chance");
   // ** Day 2/5 **
   let fiveDaysForecast__SecondDay_Name = document.querySelector(".next-5-days-forecast__next-2-day--name");
   let fiveDaysForecast__SecondDay_Date = document.querySelector(".next-5-days-forecast__next-2-day--date");
   let fiveDaysForecast__SecondDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-2-day--max-temp");
   let fiveDaysForecast__SecondDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-2-day--min-temp");
-  let fiveDaysForecast__SecondDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-2-day--wind-speed");
+  let fiveDaysForecast__SecondDay_HumidityPercentage = document.querySelector(".next-5-days-forecast__next-2-day--humidity-percentage");
   let fiveDaysForecast__SecondDay_RainChance = document.querySelector(".next-5-days-forecast__next-2-day--rain-chance");
   // ** Day 3/5 **
   let fiveDaysForecast__ThirdDay_Name = document.querySelector(".next-5-days-forecast__next-3-day--name");
   let fiveDaysForecast__ThirdDay_Date = document.querySelector(".next-5-days-forecast__next-3-day--date");
   let fiveDaysForecast__ThirdDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-3-day--max-temp");
   let fiveDaysForecast__ThirdDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-3-day--min-temp");
-  let fiveDaysForecast__ThirdDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-3-day--wind-speed");
+  let fiveDaysForecast__ThirdDay_HumidityPercentage = document.querySelector(".next-5-days-forecast__next-3-day--humidity-percentage");
   let fiveDaysForecast__ThirdDay_RainChance = document.querySelector(".next-5-days-forecast__next-3-day--rain-chance");
   // ** Day 4/5 **
   let fiveDaysForecast__FourthDay_Name = document.querySelector(".next-5-days-forecast__next-4-day--name");
   let fiveDaysForecast__FourthDay_Date = document.querySelector(".next-5-days-forecast__next-4-day--date");
   let fiveDaysForecast__FourthDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-4-day--max-temp");
   let fiveDaysForecast__FourthDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-4-day--min-temp");
-  let fiveDaysForecast__FourthDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-4-day--wind-speed");
+  let fiveDaysForecast__FourthDay_HumidityPercentage = document.querySelector(".next-5-days-forecast__next-4-day--humidity-percentage");
   let fiveDaysForecast__FourthDay_RainChance = document.querySelector(".next-5-days-forecast__next-4-day--rain-chance");
   // ** Day 5/5 **
   let fiveDaysForecast__FifthDay_Name = document.querySelector(".next-5-days-forecast__next-5-day--name");
   let fiveDaysForecast__FifthDay_Date = document.querySelector(".next-5-days-forecast__next-5-day--date");
   let fiveDaysForecast__FifthDay_MaxTemperature = document.querySelector(".next-5-days-forecast__next-5-day--max-temp");
   let fiveDaysForecast__FifthDay_MinTemperature = document.querySelector(".next-5-days-forecast__next-5-day--min-temp");
-  let fiveDaysForecast__FifthDay_WindSpeed = document.querySelector(".next-5-days-forecast__next-5-day--wind-speed");
+  let fiveDaysForecast__FifthDay_HumidityPercentage = document.querySelector(".next-5-days-forecast__next-5-day--humidity-percentage");
   let fiveDaysForecast__FifthDay_RainChance = document.querySelector(".next-5-days-forecast__next-5-day--rain-chance");
 
   // ## Get location ##
@@ -103,8 +103,8 @@ window.addEventListener('load', ()=> {
       lat  = position.coords.latitude;
 
       // ## GET Request ##
-      // const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
-      const api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
       fetch(api)
 
         // ## Return api as JSON ##
@@ -128,7 +128,7 @@ window.addEventListener('load', ()=> {
           const dailyForecast__MaxTemp_value = data.daily[0].temp.max;
           const dailyForecast__MinTemp_value = data.daily[0].temp.min;
           const dailyForecast__RainChance_value = data.daily[0].pop;
-          const dailyForecast__WindSpeed_value = data.current.wind_speed;
+          const dailyForecast__HumidityPercentage_value = data.current.humidity;
           const dailyForecast__SunriseTime_value = convertUnixTimeStampToHourAndMinute(data.current.sunrise);
           const dailyForecast__SunsetTime_value = convertUnixTimeStampToHourAndMinute(data.current.sunset);
           
@@ -178,35 +178,35 @@ window.addEventListener('load', ()=> {
           const fiveDaysForecast__FirstDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[1].dt);
           const fiveDaysForecast__FirstDay_MaxTemp_value = data.daily[1].temp.max;
           const fiveDaysForecast__FirstDay_MinTemp_value = data.daily[1].temp.min;
-          const fiveDaysForecast__FirstDay_WindSpeed_value = data.daily[1].wind_speed;
+          const fiveDaysForecast__FirstDay_HumidityPercentage_value = data.daily[1].humidity;
           const fiveDaysForecast__FirstDay_RainChance_value = data.daily[1].pop;
           // ** Day 2/5 **
           const fiveDaysForecast__SecondDay_Name_value = convertUnixTimeStampToDay(data.daily[2].dt);
           const fiveDaysForecast__SecondDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[2].dt);
           const fiveDaysForecast__SecondDay_MaxTemp_value = data.daily[2].temp.max;
           const fiveDaysForecast__SecondDay_MinTemp_value = data.daily[2].temp.min;
-          const fiveDaysForecast__SecondDay_WindSpeed_value = data.daily[2].wind_speed;
+          const fiveDaysForecast__SecondDay_HumidityPercentage_value = data.daily[2].humidity;
           const fiveDaysForecast__SecondDay_RainChance_value = data.daily[2].pop;
           // ** Day 3/5 **
           const fiveDaysForecast__ThirdDay_Name_value = convertUnixTimeStampToDay(data.daily[3].dt);
           const fiveDaysForecast__ThirdDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[3].dt);
           const fiveDaysForecast__ThirdDay_MaxTemp_value = data.daily[3].temp.max;
           const fiveDaysForecast__ThirdDay_MinTemp_value = data.daily[3].temp.min;
-          const fiveDaysForecast__ThirdDay_WindSpeed_value = data.daily[3].wind_speed;
+          const fiveDaysForecast__ThirdDay_HumidityPercentage_value = data.daily[3].humidity;
           const fiveDaysForecast__ThirdDay_RainChance_value = data.daily[3].pop;
           // ** Day 4/5 **
           const fiveDaysForecast__FourthDay_Name_value = convertUnixTimeStampToDay(data.daily[4].dt);
           const fiveDaysForecast__FourthDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[4].dt);
           const fiveDaysForecast__FourthDay_MaxTemp_value = data.daily[4].temp.max;
           const fiveDaysForecast__FourthDay_MinTemp_value = data.daily[4].temp.min;
-          const fiveDaysForecast__FourthDay_WindSpeed_value = data.daily[4].wind_speed;
+          const fiveDaysForecast__FourthDay_HumidityPercentage_value = data.daily[4].humidity;
           const fiveDaysForecast__FourthDay_RainChance_value = data.daily[4].pop;
           // ** Day 5/5 **
           const fiveDaysForecast__FifthDay_Name_value = convertUnixTimeStampToDay(data.daily[5].dt);
           const fiveDaysForecast__FifthDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[5].dt);
           const fiveDaysForecast__FifthDay_MaxTemp_value = data.daily[5].temp.max;
           const fiveDaysForecast__FifthDay_MinTemp_value = data.daily[5].temp.min;
-          const fiveDaysForecast__FifthDay_WindSpeed_value = data.daily[5].wind_speed;
+          const fiveDaysForecast__FifthDay_HumidityPercentage_value = data.daily[5].humidity;
           const fiveDaysForecast__FifthDay_RainChance_value = data.daily[5].pop;
 
           // ## Display data ##
@@ -222,7 +222,7 @@ window.addEventListener('load', ()=> {
           // Daily forecast
           dailyForecast__MaxTemp.textContent = parseInt(dailyForecast__MaxTemp_value) + '°';
           dailyForecast__MinTemp.textContent = parseInt(dailyForecast__MinTemp_value) + '°';
-          dailyForecast__WindSpeed.textContent = parseInt(dailyForecast__WindSpeed_value);
+          dailyForecast__HumidityPercentage.textContent = parseInt(dailyForecast__HumidityPercentage_value) + "%";
           dailyForecast__RainChance.textContent = parseInt(dailyForecast__RainChance_value*100) + "%";
           dailyForecast__SunriseTime.textContent = dailyForecast__SunriseTime_value;
           dailyForecast__SunsetTime.textContent = dailyForecast__SunsetTime_value;
@@ -268,35 +268,35 @@ window.addEventListener('load', ()=> {
           fiveDaysForecast__FirstDay_Date.textContent = fiveDaysForecast__FirstDay_Date_value;
           fiveDaysForecast__FirstDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MaxTemp_value) + '°';
           fiveDaysForecast__FirstDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MinTemp_value) + '°';
-          fiveDaysForecast__FirstDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FirstDay_WindSpeed_value);
+          fiveDaysForecast__FirstDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__FirstDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__FirstDay_RainChance.textContent = parseInt(fiveDaysForecast__FirstDay_RainChance_value*100) + '%';
           // ** Display next (2) day **
           fiveDaysForecast__SecondDay_Name.textContent = fiveDaysForecast__SecondDay_Name_value;
           fiveDaysForecast__SecondDay_Date.textContent = fiveDaysForecast__SecondDay_Date_value;
           fiveDaysForecast__SecondDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MaxTemp_value) + '°';
           fiveDaysForecast__SecondDay_MinTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MinTemp_value) + '°';
-          fiveDaysForecast__SecondDay_WindSpeed.textContent = parseInt(fiveDaysForecast__SecondDay_WindSpeed_value);
+          fiveDaysForecast__SecondDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__SecondDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__SecondDay_RainChance.textContent = parseInt(fiveDaysForecast__SecondDay_RainChance_value*100) + '%';
           // ** Display next (3) day **
           fiveDaysForecast__ThirdDay_Name.textContent = fiveDaysForecast__ThirdDay_Name_value;
           fiveDaysForecast__ThirdDay_Date.textContent = fiveDaysForecast__ThirdDay_Date_value;
           fiveDaysForecast__ThirdDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MaxTemp_value) + '°';
           fiveDaysForecast__ThirdDay_MinTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MinTemp_value) + '°';
-          fiveDaysForecast__ThirdDay_WindSpeed.textContent = parseInt(fiveDaysForecast__ThirdDay_WindSpeed_value);
+          fiveDaysForecast__ThirdDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__ThirdDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__ThirdDay_RainChance.textContent = parseInt(fiveDaysForecast__ThirdDay_RainChance_value*100) + '%';
           // ** Display next (4) day **
           fiveDaysForecast__FourthDay_Name.textContent = fiveDaysForecast__FourthDay_Name_value;
           fiveDaysForecast__FourthDay_Date.textContent = fiveDaysForecast__FourthDay_Date_value;
           fiveDaysForecast__FourthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FourthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MinTemp_value) + '°';
-          fiveDaysForecast__FourthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FourthDay_WindSpeed_value);
+          fiveDaysForecast__FourthDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__FourthDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__FourthDay_RainChance.textContent = parseInt(fiveDaysForecast__FourthDay_RainChance_value*100) + '%';
           // ** Display next (5) day **
           fiveDaysForecast__FifthDay_Name.textContent = fiveDaysForecast__FifthDay_Name_value;
           fiveDaysForecast__FifthDay_Date.textContent = fiveDaysForecast__FifthDay_Date_value;
           fiveDaysForecast__FifthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FifthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MinTemp_value) + '°';
-          fiveDaysForecast__FifthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FifthDay_WindSpeed_value);
+          fiveDaysForecast__FifthDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__FifthDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__FifthDay_RainChance.textContent = parseInt(fiveDaysForecast__FifthDay_RainChance_value*100) + '%';
 
           // Console logs for test

@@ -4,11 +4,11 @@
 @import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
 @import "variables";
 @import "weathericons";
-@import "test";
+// @import "test";
 
 
 html {
-  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
+  font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%;
 }
 
