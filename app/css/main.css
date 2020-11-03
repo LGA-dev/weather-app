@@ -7171,6 +7171,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 1.5rem;
   padding: .5rem; }
 
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important; }
+
 html {
   font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%; }

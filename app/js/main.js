@@ -269,35 +269,35 @@ window.addEventListener('load', ()=> {
           fiveDaysForecast__FirstDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MaxTemp_value) + '°';
           fiveDaysForecast__FirstDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FirstDay_MinTemp_value) + '°';
           fiveDaysForecast__FirstDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FirstDay_WindSpeed_value);
-          fiveDaysForecast__FirstDay_RainChance.textContent = (fiveDaysForecast__FirstDay_RainChance_value*100) + '%';
+          fiveDaysForecast__FirstDay_RainChance.textContent = parseInt(fiveDaysForecast__FirstDay_RainChance_value*100) + '%';
           // ** Display next (2) day **
           fiveDaysForecast__SecondDay_Name.textContent = fiveDaysForecast__SecondDay_Name_value;
           fiveDaysForecast__SecondDay_Date.textContent = fiveDaysForecast__SecondDay_Date_value;
           fiveDaysForecast__SecondDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MaxTemp_value) + '°';
           fiveDaysForecast__SecondDay_MinTemperature.textContent = parseInt(fiveDaysForecast__SecondDay_MinTemp_value) + '°';
           fiveDaysForecast__SecondDay_WindSpeed.textContent = parseInt(fiveDaysForecast__SecondDay_WindSpeed_value);
-          fiveDaysForecast__SecondDay_RainChance.textContent = (fiveDaysForecast__SecondDay_RainChance_value*100) + '%';
+          fiveDaysForecast__SecondDay_RainChance.textContent = parseInt(fiveDaysForecast__SecondDay_RainChance_value*100) + '%';
           // ** Display next (3) day **
           fiveDaysForecast__ThirdDay_Name.textContent = fiveDaysForecast__ThirdDay_Name_value;
           fiveDaysForecast__ThirdDay_Date.textContent = fiveDaysForecast__ThirdDay_Date_value;
           fiveDaysForecast__ThirdDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MaxTemp_value) + '°';
           fiveDaysForecast__ThirdDay_MinTemperature.textContent = parseInt(fiveDaysForecast__ThirdDay_MinTemp_value) + '°';
           fiveDaysForecast__ThirdDay_WindSpeed.textContent = parseInt(fiveDaysForecast__ThirdDay_WindSpeed_value);
-          fiveDaysForecast__ThirdDay_RainChance.textContent = (fiveDaysForecast__ThirdDay_RainChance_value*100) + '%';
+          fiveDaysForecast__ThirdDay_RainChance.textContent = parseInt(fiveDaysForecast__ThirdDay_RainChance_value*100) + '%';
           // ** Display next (4) day **
           fiveDaysForecast__FourthDay_Name.textContent = fiveDaysForecast__FourthDay_Name_value;
           fiveDaysForecast__FourthDay_Date.textContent = fiveDaysForecast__FourthDay_Date_value;
           fiveDaysForecast__FourthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FourthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FourthDay_MinTemp_value) + '°';
           fiveDaysForecast__FourthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FourthDay_WindSpeed_value);
-          fiveDaysForecast__FourthDay_RainChance.textContent = (fiveDaysForecast__FourthDay_RainChance_value*100) + '%';
+          fiveDaysForecast__FourthDay_RainChance.textContent = parseInt(fiveDaysForecast__FourthDay_RainChance_value*100) + '%';
           // ** Display next (5) day **
           fiveDaysForecast__FifthDay_Name.textContent = fiveDaysForecast__FifthDay_Name_value;
           fiveDaysForecast__FifthDay_Date.textContent = fiveDaysForecast__FifthDay_Date_value;
           fiveDaysForecast__FifthDay_MaxTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MaxTemp_value) + '°';
           fiveDaysForecast__FifthDay_MinTemperature.textContent = parseInt(fiveDaysForecast__FifthDay_MinTemp_value) + '°';
           fiveDaysForecast__FifthDay_WindSpeed.textContent = parseInt(fiveDaysForecast__FifthDay_WindSpeed_value);
-          fiveDaysForecast__FifthDay_RainChance.textContent = (fiveDaysForecast__FifthDay_RainChance_value*100) + '%';
+          fiveDaysForecast__FifthDay_RainChance.textContent = parseInt(fiveDaysForecast__FifthDay_RainChance_value*100) + '%';
 
           // Console logs for test
           console.log(data);
@@ -397,7 +397,7 @@ function convertUnixTimeStampToDay(timestamp) {
   weekday[1] = "Mon";
   weekday[2] = "Tue";
   weekday[3] = "Wed";
-  weekday[4] = "Thur";
+  weekday[4] = "Thu";
   weekday[5] = "Fri";
   weekday[6] = "Sat";
 
