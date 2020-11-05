@@ -102,29 +102,51 @@ window.addEventListener('load', ()=> {
       long = position.coords.longitude;
       lat  = position.coords.latitude;
 
-      // ## GET Request ##
-      const api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
-      // const api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
-      fetch(api)
+      // ## GET Requests ##
 
-        // ## Return api as JSON ##
+      // ## Location Api ##
+      const owm_location_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const owm_location_api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      fetch(owm_location_api)
+        // ## Extract the JSON body content from the response ##
         .then(response => {
           return response.json();
         })
 
-        // ## Store data from api ##
+        // ## Store and display data from JSON ##
         .then(data => {
-          // Current forecast (A) values
-          const currentForecast__CurrentLocation_value = data.timezone;
-          const currentForecast__CurrentDate_value = new Date().toLocaleDateString();
-          
-          
-          // Current weather (B) values
+          // ## Store data ##
+          // A) Current location and date
+          const currentForecast__CurrentLocation_value = data.name;
+          const currentForecast__CurrentDate_value = convertUnixTimeStampToDayMonth(data.dt);
+          const currentForecast__CurrentDay_value = convertUnixTimeStampToDay(data.dt);
+
+          // ## Display data ##
+          // A) Current location and date
+          currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
+          currentForecast__CurrentDate.textContent = currentForecast__CurrentDay_value + " " + currentForecast__CurrentDate_value;
+        });
+
+
+
+      // ## Weather Api ##
+      const owm_weather_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const owm_weather_api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      fetch(owm_weather_api)
+        // ## Extract the JSON body content from the response ##
+        .then(response => {
+          return response.json();
+        })
+
+        // ## Store data from JSON ##
+        .then(data => {
+          // ## Store data ##
+          // B) Current temperature values
           const currentForecast__CurrentTemp_value = data.current.temp;
           const currentForecast__CurrentTempDescription_value = data.current.weather[0].description;
           
           
-          // Daily forecast (C) values
+          // C) Daily stats values
           const dailyForecast__MaxTemp_value = data.daily[0].temp.max;
           const dailyForecast__MinTemp_value = data.daily[0].temp.min;
           const dailyForecast__RainChance_value = data.daily[0].pop;
@@ -133,7 +155,7 @@ window.addEventListener('load', ()=> {
           const dailyForecast__SunsetTime_value = convertUnixTimeStampToHourAndMinute(data.current.sunset);
           
           
-          // Hourly forecast (D) values
+          // D) Hourly forecast values
           // ** Next (1) hour **
           const hourlyForecast__Hour1_Name_value = convertUnixTimeStampToHourAndMinute(data.hourly[1].dt);
           const hourlyForecast__Hour1_Temp_value = data.hourly[1].temp;
@@ -157,7 +179,7 @@ window.addEventListener('load', ()=> {
           const hourlyForecast__Hour19_Temp_value = data.hourly[19].temp;
           
           
-          // Three days forecast values
+          // E) Next three days forecast values
           // ** Day 1/3 **
           const threeDaysForecast__FirstDay_Name_value = convertUnixTimeStampToDay(data.daily[1].dt);
           const threeDaysForecast__FirstDay_MinTemp_value = data.daily[1].temp.min;
@@ -172,7 +194,7 @@ window.addEventListener('load', ()=> {
           const threeDaysForecast__ThirdDay_MaxTemp_value = data.daily[3].temp.max;
           
           
-          // Five days forecast values
+          // F) Next five days forecast values
           // ** Day 1/5 **
           const fiveDaysForecast__FirstDay_Name_value = convertUnixTimeStampToDay(data.daily[1].dt);
           const fiveDaysForecast__FirstDay_Date_value = convertUnixTimeStampToDayMonth(data.daily[1].dt);
@@ -211,15 +233,12 @@ window.addEventListener('load', ()=> {
 
           // ## Display data ##
 
-          // Current location
-          currentForecast__CurrentLocation.textContent = currentForecast__CurrentLocation_value;
-          currentForecast__CurrentDate.textContent = currentForecast__CurrentDate_value;
-
-          // Current forecast
+          // B) Current temperature
           currentForecast__CurrentTemp.textContent = parseInt(currentForecast__CurrentTemp_value) + '°';
           currentForecast__CurrentTempDescription.textContent = currentForecast__CurrentTempDescription_value.toUpperCase();
 
-          // Daily forecast
+
+          // C) Daily stats
           dailyForecast__MaxTemp.textContent = parseInt(dailyForecast__MaxTemp_value) + '°';
           dailyForecast__MinTemp.textContent = parseInt(dailyForecast__MinTemp_value) + '°';
           dailyForecast__HumidityPercentage.textContent = parseInt(dailyForecast__HumidityPercentage_value) + "%";
@@ -227,7 +246,8 @@ window.addEventListener('load', ()=> {
           dailyForecast__SunriseTime.textContent = dailyForecast__SunriseTime_value;
           dailyForecast__SunsetTime.textContent = dailyForecast__SunsetTime_value;
 
-          // Hourly forecast
+
+          // D) Hourly forecast
           // ** Display next (1) hour **
           hourlyForecast__Hour1_Name.textContent = hourlyForecast__Hour1_Name_value;
           hourlyForecast__Hour1_Temperature.textContent = parseInt(hourlyForecast__Hour1_Temp_value) + '°';
@@ -251,7 +271,7 @@ window.addEventListener('load', ()=> {
           hourlyForecast__Hour19_Temperature.textContent = parseInt(hourlyForecast__Hour19_Temp_value) + '°';
 
 
-          // Three days forecast
+          // E) Next three days forecast
           // ** Display next (1) day **
           threeDaysForecast__FirstDay_Name.textContent = threeDaysForecast__FirstDay_Name_value;
           threeDaysForecast__FirstDay_Temperatures.textContent = parseInt(threeDaysForecast__FirstDay_MinTemp_value) + '°' + " - " + parseInt(threeDaysForecast__FirstDay_MaxTemp_value) + '°';
@@ -262,7 +282,8 @@ window.addEventListener('load', ()=> {
           threeDaysForecast__ThirdDay_Name.textContent = threeDaysForecast__ThirdDay_Name_value;
           threeDaysForecast__ThirdDay_Temperatures.textContent = parseInt(threeDaysForecast__ThirdDay_MinTemp_value) + '°' + " - " + parseInt(threeDaysForecast__ThirdDay_MaxTemp_value) + '°';
 
-          // Five days forecast
+
+          // F) Next five days forecast
           // ** Display next (1) day **
           fiveDaysForecast__FirstDay_Name.textContent = fiveDaysForecast__FirstDay_Name_value;
           fiveDaysForecast__FirstDay_Date.textContent = fiveDaysForecast__FirstDay_Date_value;
@@ -299,8 +320,6 @@ window.addEventListener('load', ()=> {
           fiveDaysForecast__FifthDay_HumidityPercentage.textContent = parseInt(fiveDaysForecast__FifthDay_HumidityPercentage_value) + '%';
           fiveDaysForecast__FifthDay_RainChance.textContent = parseInt(fiveDaysForecast__FifthDay_RainChance_value*100) + '%';
 
-          // Console logs for test
-          console.log(data);
 
           // ## Icons ##
           // Current weather icon
@@ -356,11 +375,12 @@ window.addEventListener('load', ()=> {
           document.getElementById("next-5-days-forecast__icon-5").src = `http://openweathermap.org/img/wn/${next5DailyIcon5}.png`;
 
           // Test
+          console.log(data);
           console.log(currentIcon);
           console.log(hourlyIcon1);
           console.log(next3DailyIcon1);
           console.log(next5DailyIcon1);
-        })
+        });
     })
   }
 });

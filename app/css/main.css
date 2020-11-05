@@ -7177,7 +7177,9 @@ html {
 
 .font-size-1 {
   font-size: 1.1rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-left: .25rem !important;
+  color: #ec6e4c; }
 
 .font-size-5 {
   font-size: 2rem;
