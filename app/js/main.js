@@ -1,3 +1,5 @@
+// window.alert("Hi test");
+
 window.addEventListener('load', ()=> {
   let long;
   let lat;
