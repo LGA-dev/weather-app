@@ -1,11 +1,13 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-// @import "../../node_modules/bootstrap/scss/functions";
-// @import "../../node_modules/bootstrap/scss/variables";
-// @import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+$theme-colors: (
+  // "primary": #ec6e4c
+  "primary": #fd8d6d,
+  "secondary": #18222d
+);
 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "variables";
 @import "weathericons";
-// @import "test";
+//@import "test";
 
 
 html {
@@ -17,50 +19,20 @@ html {
   font-size: 1.1rem;
   font-weight: bold;
   margin-left: .25rem !important;
-  color: #ec6e4c;
 }
 
-.font-size-5 {
+.font-size-2 {
   font-size: 2rem;
   font-weight: bold;
-  // color: cyan;
+}
+
+h5 {
+  text-decoration: underline;
+  text-decoration-color: #fd8d6d;
 }
 
 // Only way to make it work
 .align-content-between {
   height: 100vh;
 }
-
-// html body.bg-dark.text-white main.container div.row.d-flex.align-content-between div.col-12.col-md-6 div.current-temp.row {
-//   border: 2px solid red;
-// }
-
-// .container {
-//   outline: 1px solid red;
-// }
-
-// .current-location {
-//   background-color: rgba(255, 0, 0, 0.5);
-// }
-
-// .current-temp {
-//   background-color: rgba(238, 255, 0, 0.5);
-// }
-
-// .daily-stats {
-//   background-color:#222;
-// }
-
-// .next-3-days-forecast {
-//   background-color: rgba(0, 47, 255, 0.5);
-// }
-
-// .hourly-forecast {
-//   background-color: rgba(0, 255, 242, 0.5);
-// }
-
-// .next-5-days-forecast {
-//   background-color: rgba(183, 0, 255, 0.5);
-// }
-
 @import 'breakpoints';
