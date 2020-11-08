@@ -7156,21 +7156,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-.current-temp__icon-container i {
-  font-size: 5rem;
-  padding: 1.5rem 0rem; }
-
-.next-3-days-forecast__icon_container i {
-  font-size: 3rem; }
-
-.hourly-forecast__icon_container i {
-  font-size: 2.5rem;
-  padding: .5rem; }
-
-.next-5-days-forecast__icon_container i {
-  font-size: 1.5rem;
-  padding: .5rem; }
-
 html {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%; }

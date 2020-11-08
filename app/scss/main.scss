@@ -1,14 +1,10 @@
 $theme-colors: (
-  // "primary": #ec6e4c
   "primary": #fd8d6d,
   "secondary": #18222d
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "variables";
-@import "weathericons";
 //@import "test";
-
 
 html {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
@@ -32,7 +28,9 @@ h5 {
 }
 
 // Only way to make it work
+// Fix this later
 .align-content-between {
   height: 100vh;
 }
+
 @import 'breakpoints';
