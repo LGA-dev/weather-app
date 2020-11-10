@@ -326,55 +326,55 @@ window.addEventListener('load', ()=> {
           // ## Icons ##
           // Current weather icon
           let currentIcon = data.current.weather[0].icon;
-          document.getElementById("current-temp__icon").src = `http://openweathermap.org/img/wn/${currentIcon}@2x.png`;
+          document.getElementById("current-temp__icon").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${currentIcon}@2x.png`;
 
           // Hourly weather icon
           let hourlyIcon1 = data.hourly[1].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-1").src = `http://openweathermap.org/img/wn/${hourlyIcon1}.png`;
+          document.getElementById("hourly-forecast__icon-1").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon1}.png`;
 
           let hourlyIcon4 = data.hourly[4].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-4").src = `http://openweathermap.org/img/wn/${hourlyIcon4}.png`;
+          document.getElementById("hourly-forecast__icon-4").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon4}.png`;
 
           let hourlyIcon7 = data.hourly[7].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-7").src = `http://openweathermap.org/img/wn/${hourlyIcon7}.png`;
+          document.getElementById("hourly-forecast__icon-7").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon7}.png`;
 
           let hourlyIcon10 = data.hourly[10].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-10").src = `http://openweathermap.org/img/wn/${hourlyIcon10}.png`;
+          document.getElementById("hourly-forecast__icon-10").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon10}.png`;
 
           let hourlyIcon13 = data.hourly[13].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-13").src = `http://openweathermap.org/img/wn/${hourlyIcon13}.png`;
+          document.getElementById("hourly-forecast__icon-13").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon13}.png`;
 
           let hourlyIcon16 = data.hourly[16].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-16").src = `http://openweathermap.org/img/wn/${hourlyIcon16}.png`;
+          document.getElementById("hourly-forecast__icon-16").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon16}.png`;
 
           let hourlyIcon19 = data.hourly[19].weather[0].icon;
-          document.getElementById("hourly-forecast__icon-19").src = `http://openweathermap.org/img/wn/${hourlyIcon19}.png`;
+          document.getElementById("hourly-forecast__icon-19").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${hourlyIcon19}.png`;
 
           // Next three days weather icon
           let next3DailyIcon1 = data.daily[1].weather[0].icon;
-          document.getElementById("next-3-days-forecast__icon-1").src = `http://openweathermap.org/img/wn/${next3DailyIcon1}@2x.png`;
+          document.getElementById("next-3-days-forecast__icon-1").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next3DailyIcon1}@2x.png`;
 
           let next3DailyIcon2 = data.daily[2].weather[0].icon;
-          document.getElementById("next-3-days-forecast__icon-2").src = `http://openweathermap.org/img/wn/${next3DailyIcon2}@2x.png`;
+          document.getElementById("next-3-days-forecast__icon-2").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next3DailyIcon2}@2x.png`;
 
           let next3DailyIcon3 = data.daily[3].weather[0].icon;
-          document.getElementById("next-3-days-forecast__icon-3").src = `http://openweathermap.org/img/wn/${next3DailyIcon3}@2x.png`;
+          document.getElementById("next-3-days-forecast__icon-3").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next3DailyIcon3}@2x.png`;
 
           // Next five days weather icon
           let next5DailyIcon1 = data.daily[1].weather[0].icon;
-          document.getElementById("next-5-days-forecast__icon-1").src = `http://openweathermap.org/img/wn/${next5DailyIcon1}.png`;
+          document.getElementById("next-5-days-forecast__icon-1").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next5DailyIcon1}.png`;
 
           let next5DailyIcon2 = data.daily[2].weather[0].icon;
-          document.getElementById("next-5-days-forecast__icon-2").src = `http://openweathermap.org/img/wn/${next5DailyIcon2}.png`;
+          document.getElementById("next-5-days-forecast__icon-2").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next5DailyIcon2}.png`;
 
           let next5DailyIcon3 = data.daily[3].weather[0].icon;
-          document.getElementById("next-5-days-forecast__icon-3").src = `http://openweathermap.org/img/wn/${next5DailyIcon3}.png`;
+          document.getElementById("next-5-days-forecast__icon-3").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next5DailyIcon3}.png`;
 
           let next5DailyIcon4 = data.daily[4].weather[0].icon;
-          document.getElementById("next-5-days-forecast__icon-4").src = `http://openweathermap.org/img/wn/${next5DailyIcon4}.png`;
+          document.getElementById("next-5-days-forecast__icon-4").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next5DailyIcon4}.png`;
 
           let next5DailyIcon5 = data.daily[5].weather[0].icon;
-          document.getElementById("next-5-days-forecast__icon-5").src = `http://openweathermap.org/img/wn/${next5DailyIcon5}.png`;
+          document.getElementById("next-5-days-forecast__icon-5").src = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${next5DailyIcon5}.png`;
 
           // Test
           console.log(data);
