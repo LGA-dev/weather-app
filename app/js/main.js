@@ -107,8 +107,8 @@ window.addEventListener('load', ()=> {
       // ## GET Requests ##
 
       // ## Location Api ##
-      const owm_location_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
-      // const owm_location_api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const owm_location_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      const owm_location_api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
       fetch(owm_location_api)
         // ## Extract the JSON body content from the response ##
         .then(response => {
@@ -132,8 +132,8 @@ window.addEventListener('load', ()=> {
 
 
       // ## Weather Api ##
-      const owm_weather_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
-      // const owm_weather_api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      // const owm_weather_api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
+      const owm_weather_api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=a7945e759b4784693427e59a9911052a`;
       fetch(owm_weather_api)
         // ## Extract the JSON body content from the response ##
         .then(response => {
@@ -382,6 +382,8 @@ window.addEventListener('load', ()=> {
           console.log(hourlyIcon1);
           console.log(next3DailyIcon1);
           console.log(next5DailyIcon1);
+
+          removeClass();
         });
     })
   }
@@ -445,3 +447,30 @@ function convertUnixTimeStampToDayMonth(timestamp) {
   // console.log(formattedTime);
   return formattedTime;
 }
+
+let weatherIcons = document.getElementsByClassName("weather-icon");
+
+function removeClass() {
+  for (var i = 0; i < weatherIcons.length; i++) {
+    weatherIcons[i].classList.remove("rotate");
+  }
+}
+
+// function removeClass() {
+//   if (weatherIcons.src.indexOf("openweathermap")) {
+//     console.log("Contains image from openweathermap");
+//     for (var i = 0; i < weatherIcons.length; i++) {
+//       weatherIcons[i].classList.remove("rotate");
+//     }
+//   }
+// }
+
+// function removeClass() {
+//   console.log("Contains image from openweathermap");
+//   for (var i = 0; i < weatherIcons.length; i++) {
+//     if (weatherIcons[i].src.indexOf("openweathermap")) {
+//       console.log(weatherIcons[i]);
+//       weatherIcons[i].classList.remove("rotate");
+//     }
+//   }
+// }
