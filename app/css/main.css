@@ -7175,19 +7175,3 @@ h5 {
 
 .align-content-between {
   height: 100vh; }
-
-div.col-12:nth-child(4) {
-  display: none; }
-
-div.col-12:nth-child(6) {
-  display: none; }
-
-@media (min-width: 768px) {
-  div.col-12:nth-child(4) {
-    display: block; }
-  div.col-12:nth-child(5) {
-    display: none; }
-  div.col-12:nth-child(6) {
-    display: block; }
-  div.col-12:nth-child(3) {
-    align-self: center; } }

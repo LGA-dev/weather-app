@@ -12,7 +12,6 @@
 
   <main class="container">
     <div class="row d-flex align-content-between">
-
       <!-- A) Current location and date -->
       <div class="col-12">
         <div class="current-location row text-center border-bottom border-primary bg-secondary">
@@ -96,7 +95,7 @@
       </div>
 
       <!-- D) Hourly forecast -->
-      <div class="col-12">
+      <div class="col-12 d-none d-md-inline justify-content-center">
         <div class="hourly-forecast row d-flex justify-content-around">
           <!-- Section title -->
           <div class="hourly-forecast__title col-12 d-flex justify-content-center align-items-center ">
@@ -190,7 +189,7 @@
       </div>
 
       <!-- E) Next three days forecast -->
-      <div class="col-12">
+      <div class="col-12 d-md-none">
         <div class="next-3-days-forecast row d-flex justify-content-around border-top border-primary">
           <!-- Section title -->
           <div class="next-3-days-forecast__title col-12 d-flex justify-content-center align-items-center mb-2">
@@ -237,7 +236,7 @@
       </div>
 
       <!-- F) Next five days forecast -->
-      <div class="col-12">
+      <div class="col-12 d-none d-md-flex">
         <div class="next-5-days-forecast row d-flex justify-content-around border-top border-primary">
           <!-- Section title -->
           <div class="next-5-days-forecast__title col-12 d-flex justify-content-center align-items-center">
@@ -407,6 +406,7 @@
       </div>
     </div>
   </main>
+
   <script src="./js/main.js"></script>
 </body>
 

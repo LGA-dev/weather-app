@@ -4,7 +4,7 @@ $theme-colors: (
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-//@import "test";
+@import "test";
 
 html {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
@@ -26,11 +26,3 @@ h5 {
   text-decoration: underline;
   text-decoration-color: #fd8d6d;
 }
-
-// Only way to make it work
-// Fix this later
-.align-content-between {
-  height: 100vh;
-}
-
-@import 'breakpoints';
