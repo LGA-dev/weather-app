@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="bg-secondary text-white">
+<body class="text-white">
 
   <main class="container">
-    <div class="row d-flex align-content-between">
-      <!-- A) Current location and date -->
+    <div class="row d-flex align-content-between vh-100">
+
+      <!-- A) Current location and date CONTENT -->
       <div class="col-12">
         <div class="current-location row text-center border-bottom border-primary bg-secondary">
           <!-- Location name -->
@@ -24,9 +25,14 @@
         </div>
       </div>
 
-      <!-- B) Current temperature -->
-      <div class="col-12 col-md-6">
-        <div class="current-temp row d-flex flex-row justify-content-around align-items-center border-bottom border-primary bg-gray h-100">
+      <!-- B) Current temperature TITLE -->
+      <div class="current-temp__title col-12 d-none d-md-flex justify-content-center align-items-center my-2 my-lg-4">
+        <h5 class="font-weight-bold m-0">Current weather</h5>
+      </div>
+
+      <!-- B) Current temperature CONTENT -->
+      <div class="col-12 col-md-6 bg-secondary">
+        <div class="current-temp row d-flex flex-row justify-content-around align-items-center border-bottom border-top border-primary h-100">
           <!-- Current temperature icon -->
           <img id="current-temp__icon" class="weather-icon rotate" src="/img/placeholder_image_x2.png" alt="" srcset="">
           <!-- Current temperature value -->
@@ -36,9 +42,9 @@
         </div>
       </div>
 
-      <!-- C) Daily stats -->
-      <div class="col-12 col-md-6">
-        <div class="daily-stats row text-center border-bottom border-primary bg-secondary">
+      <!-- C) Daily stats CONTENT -->
+      <div class="col-12 col-md-6 bg-secondary">
+        <div class="daily-stats row text-center border-bottom border-top border-primary">
           <!-- Daily max temp -->
           <div class="daily-stats__content-container col-4 d-flex flex-column justify-content-center align-items-center">
             <div class="daily-stats__max-temp mt-1 text-primary font-size-1">
@@ -96,16 +102,16 @@
         </div>
       </div>
 
-      <!-- D) Hourly forecast -->
-      <div class="col-12 d-none d-md-inline justify-content-center">
-        <div class="hourly-forecast row d-flex justify-content-around">
-          <!-- Section title -->
-          <div class="hourly-forecast__title col-12 d-flex justify-content-center align-items-center ">
-            <h5 class="mb-3 mt-2 font-weight-bold">Today's weather</h5>
-          </div>
+      <!-- D) Hourly forecast TITLE -->
+      <!-- <div class="hourly-forecast__title col-12 d-none d-md-flex justify-content-center align-items-center my-2">
+        <h5 class="font-weight-bold m-0">Hourly weather</h5>
+      </div> -->
 
+      <!-- D) Hourly forecast CONTENT -->
+      <div class="col-12 d-none d-md-inline justify-content-center mt-lg-3">
+        <div class="hourly-forecast row d-flex justify-content-around">
           <!-- Next (1) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (1) hour -->
             <p class="hourly-forecast__next-1-hour--name m-0">00:00</p>
             <!-- Next (1) forecast icon -->
@@ -117,7 +123,7 @@
           </div>
           
           <!-- Next (4) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (4) hour -->
             <p class="hourly-forecast__next-4-hour--name m-0">00:00</p>
             <!-- Next (4) forecast icon -->
@@ -129,7 +135,7 @@
           </div>
           
           <!-- Next (7) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (7) hour -->
             <p class="hourly-forecast__next-7-hour--name m-0">00:00</p>
             <!-- Next (7) forecast icon -->
@@ -141,7 +147,7 @@
           </div>
           
           <!-- Next (10) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (10) hour -->
             <p class="hourly-forecast__next-10-hour--name m-0">00:00</p>
             <!-- Next (10) forecast icon -->
@@ -153,7 +159,7 @@
           </div>
           
           <!-- Next (13) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (13) hour -->
             <p class="hourly-forecast__next-13-hour--name m-0">00:00</p>
             <!-- Next (13) forecast icon -->
@@ -165,7 +171,7 @@
           </div>
           
           <!-- Next (16) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (16) hour -->
             <p class="hourly-forecast__next-16-hour--name m-0">00:00</p>
             <!-- Next (16) forecast icon -->
@@ -177,7 +183,7 @@
           </div>
           
           <!-- Next (19) hour forecast card -->
-          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary mb-3">
+          <div class="hourly-forecast__content-container col-auto d-flex flex-column justify-content-around align-items-center border border-primary bg-secondary">
             <!-- Next (19) hour -->
             <p class="hourly-forecast__next-19-hour--name m-0">00:00</p>
             <!-- Next (19) forecast icon -->
@@ -190,14 +196,14 @@
         </div>
       </div>
 
-      <!-- E) Next three days forecast -->
-      <div class="col-12 d-md-none">
+      <!-- E) Next three days forecast TITLE -->
+      <div class="next-3-days-forecast__title col-12 d-flex d-md-none justify-content-center align-items-center">
+        <h5 class="font-weight-bold m-0">Next 3 days weather</h5>
+      </div>
+
+      <!-- E) Next three days forecast CONTENT -->
+      <div class="col-12 d-md-none bg-secondary">
         <div class="next-3-days-forecast row d-flex justify-content-around border-top border-primary">
-          <!-- Section title -->
-          <div class="next-3-days-forecast__title col-12 d-flex justify-content-center align-items-center mb-2">
-            <h5 class="my-2 font-weight-bold">Next three days</h5>
-          </div>
-          
           <!-- Next (1) day forecast card -->
           <div class="next-3-days-forecast__content-container col-3 p-0 d-flex flex-column justify-content-around align-items-center">
             <!-- Next (1) day -->
@@ -237,22 +243,23 @@
         </div>
       </div>
 
-      <!-- F) Next five days forecast -->
+      <!-- F) Next five days forecast TITLE -->
+      <div class="next-5-days-forecast__title col-12 d-none d-md-flex justify-content-center align-items-center my-2 my-lg-4">
+        <h5 class="font-weight-bold m-0">Next 5 days weather</h5>
+      </div>
+
+      <!-- F) Next five days forecast CONTENT -->
       <div class="col-12 d-none d-md-flex">
-        <div class="next-5-days-forecast row d-flex justify-content-around border-top border-primary">
-          <!-- Section title -->
-          <div class="next-5-days-forecast__title col-12 d-flex justify-content-center align-items-center">
-            <h5 class="mt-2 font-weight-bold">Next five days</h5>
-          </div>
+        <div class="next-5-days-forecast row d-flex justify-content-around border-primary">
           <!-- Next (1) day forecast card -->
-          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-primary bg-secondary mt-2">
+          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-top border-primary bg-secondary mb-2">
             <!-- Next (1) day and month -->
             <div class="next-5-days-forecast__content_container col-2 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center text-center">
               <p class="next-5-days-forecast__next-1-day--name m-0 mr-2 font-weight-bold">Day</p>
               <p class="next-5-days-forecast__next-1-day--date m-0 font-weight-bold">00/00</p>
             </div>
             <!-- Next (1) forecast icon -->
-            <div class="next-5-days-forecast__icon_container col-1 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center text-center">
+            <div class="next-5-days-forecast__icon_container col-1 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center h-100 text-center">
               <img id="next-5-days-forecast__icon-1" class="weather-icon rotate" src="/img/placeholder_image_x1.png" alt="" srcset="">
             </div>
             <!-- Next (1) max temp -->
@@ -277,7 +284,7 @@
             </div>
           </div>
           <!-- Next (2) day forecast card -->
-          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-primary bg-secondary mt-2">
+          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-top border-primary bg-secondary mb-2">
             <!-- Next (2) day and month -->
             <div class="next-5-days-forecast__content_container col-2 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center text-center">
               <p class="next-5-days-forecast__next-2-day--name m-0 mr-2 font-weight-bold">Day</p>
@@ -309,7 +316,7 @@
             </div>
           </div>
           <!-- Next (3) day forecast card -->
-          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-primary bg-secondary mt-2">
+          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-top border-primary bg-secondary mb-2">
             <!-- Next (3) day and month -->
             <div class="next-5-days-forecast__content_container col-2 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center text-center">
               <p class="next-5-days-forecast__next-3-day--name m-0 mr-2 font-weight-bold">Day</p>
@@ -341,7 +348,7 @@
             </div>
           </div>
           <!-- Next (4) day forecast card -->
-          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-primary bg-secondary mt-2">
+          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-bottom border-top border-primary bg-secondary mb-2">
             <!-- Next (4) day and month -->
             <div class="next-5-days-forecast__content_container col-2 d-flex flex-column-reverse flex-lg-row  justify-content-around align-items-center text-center">
               <p class="next-5-days-forecast__next-4-day--name m-0 mr-2 font-weight-bold">Day</p>
@@ -373,7 +380,7 @@
             </div>
           </div>
           <!-- Next (5) day forecast card -->
-          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-primary bg-secondary mt-2">
+          <div class="next-5-days-forecast col-12 d-flex justify-content-left align-items-center border-top border-primary bg-secondary">
             <!-- Next (5) day and month -->
             <div class="next-5-days-forecast__content_container col-2 d-flex flex-column-reverse flex-lg-row justify-content-around align-items-center text-center">
               <p class="next-5-days-forecast__next-5-day--name m-0 mr-2 font-weight-bold">Day</p>
@@ -406,6 +413,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </main>
 

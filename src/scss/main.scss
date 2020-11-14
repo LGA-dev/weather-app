@@ -1,14 +1,19 @@
 $theme-colors: (
   "primary": #fd8d6d,
-  "secondary": #18222d
+  "secondary": #18222d,
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "test";
+// @import "test";
 
 html {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%;
+}
+
+body {
+  background: rgb(16,21,27);
+  // background: linear-gradient(90deg, rgba(16,21,27,1) 15%, rgba(24,34,45,1) 50%, rgba(16,21,27,1) 85%); 
 }
 
 .font-size-1 {
@@ -33,9 +38,9 @@ h5 {
 
 @-webkit-keyframes rotation {
   from {
-      -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   to {
-      -webkit-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
   }
 }
