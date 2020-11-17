@@ -12,35 +12,32 @@ html {
 }
 
 body {
-  background: rgb(16,21,27);
-  // background: linear-gradient(90deg, rgba(16,21,27,1) 15%, rgba(24,34,45,1) 50%, rgba(16,21,27,1) 85%); 
+  background-color: darken(#18222d, 5%);
 }
 
 .font-size-1 {
   font-size: 1.1rem;
-  font-weight: bold;
   margin-left: .25rem !important;
 }
 
 .font-size-2 {
   font-size: 2rem;
+}
+
+.font-size-1,
+.font-size-2 {
   font-weight: bold;
 }
 
-h5 {
-  text-decoration: underline;
-  text-decoration-color: #fd8d6d;
-}
-
 .rotate {
-  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
 }
 
-@-webkit-keyframes rotation {
+@keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
