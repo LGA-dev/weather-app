@@ -3,16 +3,27 @@
 ## Table of contents
 
 - [General info](#general-info)
-- [Screenshots](#screenshot)
+- [Showcase](#showcase)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Status](#status)
 
 ## General info
+In this project I learned many things.
 
-Weather app made with Bootstrap 4, Sass and Javascript.
+- I learned how to use Gulp to automate tasks. 
+- I learned how to consume and manipulate data from an API. 
+- I learned how to better organize my project folders.
+- I learned to use Github branches (development/main).
+- I learned how to create [a boilerplate for my projects](https://github.com/LGA-dev/bootstrap-sass-fontawesome-gulp-boilerplate)
 
-## Screenshot
+I tried to make the UI as clean as possible, I need to improve a little more that aspect.
+
+Time to learn React!
+
+## Showcase
+
+![Example screenshot](./src/img/project_showcase.png)
 
 ## Technologies
 
@@ -21,12 +32,13 @@ Weather app made with Bootstrap 4, Sass and Javascript.
 - Sass
 - Bootstrap 4
 - Javascript
+- FontAwesome
 - Gulp
 
 ## Setup
 
-- [Demo]()
+- [Demo](https://cranky-murdock-6375d5.netlify.app/)
 
 ## Status
 
-Project is: _in progress_
+Project is: _finished_
