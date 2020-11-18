@@ -26,7 +26,7 @@ gulp.task('js', gulp.series(() => {
   return gulp.src([
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js'
+    'node_modules/popper.js/dist/umd/popper.min.js',
   ])
     // Directory to save the compressed files
     .pipe(gulp.dest('src/js'))
@@ -68,7 +68,12 @@ gulp.watch([
 
 // Watch for changes in html files and inject them
 gulp.watch([
-  'src/js/*.js'
+  'src/*.html'
+]).on('change', browserSync.reload);
+
+// Watch for changes in html files and inject them
+gulp.watch([
+  'src/js/main.js'
 ]).on('change', browserSync.reload);
 
 
