@@ -42,12 +42,18 @@
   let hourlyForecast__Hour19_Temperature = document.querySelector(".hourly-forecast__next-19-hour--temps");
 
   // Three days forecast (E) variables
+  // ** Day 1/3 **
   let threeDaysForecast__FirstDay_Name = document.querySelector(".next-3-days-forecast__next-1-day--name");
-  let threeDaysForecast__FirstDay_Temperatures = document.querySelector(".next-3-days-forecast__next-1-day--temps");
+  let threeDaysForecast__FirstDay_MinTemperature = document.querySelector(".next-3-days-forecast__next-1-day--min-temp");
+  let threeDaysForecast__FirstDay_MaxTemperature = document.querySelector(".next-3-days-forecast__next-1-day--max-temp");
+  // ** Day 2/3 **
   let threeDaysForecast__SecondDay_Name = document.querySelector(".next-3-days-forecast__next-2-day--name");
-  let threeDaysForecast__SecondDay_Temperatures = document.querySelector(".next-3-days-forecast__next-2-day--temps");
+  let threeDaysForecast__SecondDay_MinTemperature = document.querySelector(".next-3-days-forecast__next-2-day--min-temp");
+  let threeDaysForecast__SecondDay_MaxTemperature = document.querySelector(".next-3-days-forecast__next-2-day--max-temp");
+  // ** Day 3/3 **
   let threeDaysForecast__ThirdDay_Name = document.querySelector(".next-3-days-forecast__next-3-day--name");
-  let threeDaysForecast__ThirdDay_Temperatures = document.querySelector(".next-3-days-forecast__next-3-day--temps");
+  let threeDaysForecast__ThirdDay_MinTemperature = document.querySelector(".next-3-days-forecast__next-3-day--min-temp");
+  let threeDaysForecast__ThirdDay_MaxTemperature = document.querySelector(".next-3-days-forecast__next-3-day--max-temp");
 
   // Five days forecast (F) variables
   // ** Day 1/5 **
@@ -121,7 +127,7 @@ function ApiGETRequest() {
       // A) Current location and date
       // ## Display data ##
       currentForecast__CurrentLocation.textContent = data.name;
-      currentForecast__CurrentDate.textContent = convertUnixTimeStampToDayMonth(data.dt) + " " + convertUnixTimeStampToDayString(data.dt);
+      currentForecast__CurrentDate.textContent = convertUnixTimeStampToHourAndMinute(data.dt) + " " + convertUnixTimeStampToDayMonth(data.dt);
     });
 
   // ## Fetch Weather Api ##
@@ -170,14 +176,16 @@ function ApiGETRequest() {
       // ## Display data ##
       // ** Day (1/3) **
       threeDaysForecast__FirstDay_Name.textContent = convertUnixTimeStampToDayString(data.daily[1].dt);
-      threeDaysForecast__FirstDay_Temperatures.textContent = parseInt(data.daily[1].temp.min) + '°' + " - " + parseInt(data.daily[1].temp.max) + '°';
+      threeDaysForecast__FirstDay_MinTemperature.textContent = parseInt(data.daily[1].temp.min) + '°';
+      threeDaysForecast__FirstDay_MaxTemperature.textContent = parseInt(data.daily[1].temp.max) + '°';
       // ** Day (2/3) **
       threeDaysForecast__SecondDay_Name.textContent = convertUnixTimeStampToDayString(data.daily[2].dt);
-      threeDaysForecast__SecondDay_Temperatures.textContent = parseInt(data.daily[2].temp.min) + '°' + " - " + parseInt(data.daily[2].temp.max) + '°';
+      threeDaysForecast__SecondDay_MinTemperature.textContent = parseInt(data.daily[2].temp.min) + '°';
+      threeDaysForecast__SecondDay_MaxTemperature.textContent = parseInt(data.daily[2].temp.max) + '°';
       // ** Day (3/3) **
       threeDaysForecast__ThirdDay_Name.textContent = convertUnixTimeStampToDayString(data.daily[3].dt);
-      threeDaysForecast__ThirdDay_Temperatures.textContent = parseInt(data.daily[3].temp.min) + '°' + " - " + parseInt(data.daily[3].temp.max) + '°';
-
+      threeDaysForecast__ThirdDay_MinTemperature.textContent = parseInt(data.daily[3].temp.min) + '°';
+      threeDaysForecast__ThirdDay_MaxTemperature.textContent = parseInt(data.daily[3].temp.max) + '°';
 
       // F) Next five days forecast values
       // ## Display data ##
