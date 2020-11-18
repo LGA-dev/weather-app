@@ -1,11 +1,20 @@
-$theme-colors: (
-  "primary": #fd8d6d,
-  "secondary": #18222d,
-);
+/* 
+======================================================
+00. Imports
+01. Global variables & Utility classes
+02. Animations
+====================================================== 
+*/
 
+
+// 00. Imports
+@import "custom";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-// @import "test";
+// This test file will override every setting for each element, making it easier to detect errors
+// @import "test"; 
 
+
+// 01. Global variables & Utility classes
 html {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
   height: 100%;
@@ -29,6 +38,8 @@ body {
   font-weight: bold;
 }
 
+
+// 02. Animations
 .rotate {
   animation: rotation 2s infinite linear;
 }

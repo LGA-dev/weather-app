@@ -1,4 +1,4 @@
-  /* 
+/* 
 ======================================================
 00. Global variables
 01. Geolocation Event Listener
@@ -6,9 +6,6 @@
 03. Other functions
 ====================================================== 
 */
-
-window.alert("Working");
-
 
 // *  00. Global variables *
 
@@ -249,7 +246,7 @@ function ApiGETRequest() {
       // Remove rotating animation on loading icons
       removeClass();
       // Test
-      console.log(data);
+      // console.log(data);
     });
 }
 

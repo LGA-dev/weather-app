@@ -68,7 +68,7 @@ gulp.watch([
 
 // Watch for changes in html files and inject them
 gulp.watch([
-  'src/*.html'
+  'src/js/*.js'
 ]).on('change', browserSync.reload);
 
 
